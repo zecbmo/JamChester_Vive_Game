@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vive Template.CSharp.Plugins", "Vive Template.CSharp.Plugins.csproj", "{23FD09D4-093A-9F0D-6607-5A7D1BEBBE4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vive Template.CSharp", "Vive Template.CSharp.csproj", "{2EFC4447-D8F4-8ADC-C672-EDF9448A3A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vive Template.CSharp.Editor", "Vive Template.CSharp.Editor.csproj", "{AE7EC354-D6B7-DA00-813F-3ECB4FEA66A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23FD09D4-093A-9F0D-6607-5A7D1BEBBE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23FD09D4-093A-9F0D-6607-5A7D1BEBBE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23FD09D4-093A-9F0D-6607-5A7D1BEBBE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23FD09D4-093A-9F0D-6607-5A7D1BEBBE4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFC4447-D8F4-8ADC-C672-EDF9448A3A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFC4447-D8F4-8ADC-C672-EDF9448A3A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFC4447-D8F4-8ADC-C672-EDF9448A3A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFC4447-D8F4-8ADC-C672-EDF9448A3A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7EC354-D6B7-DA00-813F-3ECB4FEA66A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7EC354-D6B7-DA00-813F-3ECB4FEA66A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7EC354-D6B7-DA00-813F-3ECB4FEA66A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7EC354-D6B7-DA00-813F-3ECB4FEA66A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
