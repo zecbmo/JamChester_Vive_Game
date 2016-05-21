@@ -25,7 +25,7 @@ public class TrophyShelf : MonoBehaviour {
         transform.position += vector;
         foreach (TrophySlot slot in slots)
         {
-            slot.transform.position += vector;
+            slot.transform.Translate(vector);
         }
     }
     
