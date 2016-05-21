@@ -25,6 +25,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     //timer 
     private bool timer_start_ = false;
     private float on_floor_counter_ = 0;
+    public float on_floor_max_time = 5; //how long the throphy can be on the floor before loosing
 
     protected override void Start()
     {
@@ -76,7 +77,7 @@ public class GenericTrophy : SteamVR_InteractableObject
                 break;
             case TrophyState.ON_FLOOR:
                 OnFloorStateHelper();
-                
+                OnFloorCounter();
                 break;
 
         }
@@ -87,7 +88,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         if (prev_state_ != TrophyState.ON_FLOOR)
         {
-            timer_start_ = true;
+            timer_start_ = true; //indicates exact time/tick that the state changes to the floor
         }
         else
         {
@@ -98,25 +99,31 @@ public class GenericTrophy : SteamVR_InteractableObject
     //will control the win state... if it is on the floor for too long 
     void OnFloorCounter()
     {
-        if (timer_start_)
+        if (timer_start_) //called once 
         {
             on_floor_counter_ = 0;    
         }
 
+        if (on_floor_counter_ > on_floor_max_time)
+        {
+            Globals.game_state = GameState.LOST;
+        }
 
-
+        on_floor_counter_ += Time.deltaTime;
     }
 
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        OnFloorCounter();
+        StateManager();
+       
     }
 
     protected override void Update()
     {
         UpdateState();
+        print(on_floor_counter_);
 
     }
 
