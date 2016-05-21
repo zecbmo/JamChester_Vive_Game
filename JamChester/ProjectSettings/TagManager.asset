@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - SPRAY
+  - RAG BASE
+  - RAG TRIGGER
+  - TROPHY
+  - STAMP
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - RAG BASE PHYS
+  - TROPHY PHS
   - 
   - 
   - 

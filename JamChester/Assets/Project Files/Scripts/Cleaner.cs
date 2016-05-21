@@ -31,6 +31,11 @@ public class Cleaner : SteamVR_InteractableObject
         Spray script = spray_clone.GetComponent<Spray>();
         script.cleaner_type = cleaner_type;
         rb.AddRelativeForce(-transform.forward * spray_speed);
+
+      
         Destroy(spray_clone, spray_life);
+
+
+
     }
 }

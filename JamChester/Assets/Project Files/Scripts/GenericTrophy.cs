@@ -33,12 +33,50 @@ public class GenericTrophy : SteamVR_InteractableObject
     public int number_of_sprays_to_clean = 3;
     private int spray_count = 0;
 
+
+    //Rags for ragging
+    public RagType rag_type = RagType.NONE;
+    public float seconds_to_clean_with_rag = 2;
+    private float rag_counter = 0;
+    private bool rag_timer_start = false;
+    private bool polished_with_rag = false;
+
+    //base selector
+    public enum BaseType { SQUARE, TRIANGLE, CIRCLE};
+    public BaseType base_type = BaseType.SQUARE;
+    private GameObject Base;
+  
+
+
     protected override void Start()
     {
         base.Start();
-      
+        SelectBase();
+        ChildStartFunctions();
     }
+    public virtual void ChildStartFunctions()
+    {
+        //overide in childe
+    }
+    void SelectBase()
+    {
+        switch (base_type)
+        {
+            case BaseType.SQUARE:
+                Base = this.transform.Find("Sqaure Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.TRIANGLE:
+                Base = this.transform.Find("Triangle Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.CIRCLE:
+                Base = this.transform.Find("Circle Base").gameObject;
+                Base.SetActive(true);
+                break;
+        }
 
+    }
     public bool IsCompleted()
     {
         return completed_;
@@ -120,19 +158,40 @@ public class GenericTrophy : SteamVR_InteractableObject
         on_floor_counter_ += Time.deltaTime;
     }
 
+    //will control the win state... if it is on the floor for too long 
+    void RagCounter()
+    {
+        if (rag_timer_start) //called once 
+        {
+            rag_counter += Time.deltaTime;
+        }
+
+        if (rag_counter > seconds_to_clean_with_rag)
+        {
+            polished_with_rag = true;
+        }
+
+        
+    }
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
         StateManager();
-       
+        RagCounter();
     }
 
     protected override void Update()
     {
         UpdateState();
-       // print(on_floor_counter_);
+        print("Washed = :" + polished_with_rag + "  RagTimer: " + rag_counter);
+        ChildUpdateFunctions();
 
+    }
+
+    public virtual void ChildUpdateFunctions()
+    {
+        //Put override functions for child class in here when inheriting
     }
 
     private void CheckAndSetCompletion()
@@ -180,6 +239,31 @@ public class GenericTrophy : SteamVR_InteractableObject
                 //if wrong spray...
             }
         }
+
+        //rag collisions - start the timer
+        if (coll.tag == "RAG TRIGGER")
+        {
+            Rag script = coll.GetComponent<Rag>();
+            if (script.type == rag_type)
+            {
+                rag_timer_start = true;
+            }          
+        }
+       
     }
-    
+
+    void OnTriggerExit(Collider coll)
+    {
+        if (coll.tag == "RAG TRIGGER")
+        {
+            
+            if (rag_timer_start == true)
+            {
+                rag_timer_start = false;
+                rag_counter = 0;
+            }
+        }
+    }
+
+
 }
