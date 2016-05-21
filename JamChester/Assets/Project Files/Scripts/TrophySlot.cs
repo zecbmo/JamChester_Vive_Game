@@ -1,30 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-class Trophy {
-    public TrophyType type;
-    public bool isClean;
-
-}
-
 public class TrophySlot : MonoBehaviour {
-    public TrophyType trophyType;
-    public TrophyType invalidLeft;
-    public TrophyType invalidRight;
-    private bool isUsed;
+    [Header("Trophy Rules")]
+    public TrophyType trophyType = TrophyType.NONE;
+    public TrophyType invalidLeft = TrophyType.NONE;
+    public TrophyType invalidRight = TrophyType.NONE;
 
-	// Use this for initialization
-	void Start () {
-        isUsed = false;
-    }
+
+    public bool isUsed = false;
+
+    public TrophyShelf owner;
 	
-    void OnTriggerEnter(Collision collision) {
-        GenericTrophy trophy = collision.gameObject.GetComponent<GenericTrophy>();
+    void OnTriggerEnter(Collider collider) {
+        GenericTrophy trophy = collider.gameObject.GetComponent<GenericTrophy>();
         if (trophy == null) {
+            Debug.Log("Trophy Slot collider null?");
             return;
         }
-        if (trophy.type == trophyType&& trophy.isClean) {
-            isUsed = true;            
+        if (trophy.type == trophyType&& trophy.IsCompleted()) {
+            isUsed = true;
+            Debug.Log("Triggered Trophy Slot");
+            if (owner) {
+                owner.OnSlotFilled();
+            }
         }
     }
 }
