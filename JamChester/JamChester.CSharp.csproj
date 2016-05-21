@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>5.3.4f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -63,12 +61,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="JamChester.CSharp.Plugins.csproj">
@@ -98,9 +90,10 @@
     <Compile Include="Assets\Project Files\Scripts\GenericTrophy.cs" />
     <Compile Include="Assets\Project Files\Scripts\Globals.cs" />
     <Compile Include="Assets\Project Files\Scripts\Spray.cs" />
-    <Compile Include="Assets\Project Files\Scripts\TrophyShelf.cs" />
-    <Compile Include="Assets\Project Files\Scripts\TrophyShelfSpawner.cs" />
-    <Compile Include="Assets\Project Files\Scripts\TrophySlot.cs" />
+    <Compile Include="Assets\Project Files\Scripts\TrophySpawner.cs" />
+    <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophyShelf.cs" />
+    <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophyShelfSpawner.cs" />
+    <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophySlot.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
