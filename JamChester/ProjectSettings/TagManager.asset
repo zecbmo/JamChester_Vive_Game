@@ -10,6 +10,8 @@ TagManager:
   - TROPHY
   - STAMP
   - HEAD
+  - TORCH
+  - FINGERPRINTS
   layers:
   - Default
   - TransparentFX
