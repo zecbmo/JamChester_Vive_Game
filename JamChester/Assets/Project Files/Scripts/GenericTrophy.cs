@@ -9,11 +9,11 @@ public class GenericTrophy : SteamVR_InteractableObject
     [Header("Trophy Stuff")]
     //Type and wheter the tasks for trophy completed
     public TrophyType type = TrophyType.T_1;
-    public bool isClean;
+    
     private bool completed_ = false;
     
     //Managing Trophy State
-    private enum TrophyState {IN_TRAY, ON_FLOOR, IN_SLOT, ACTIVE, COMPLETED};
+    private enum TrophyState {IN_TRAY, ON_FLOOR, IN_SLOT, ACTIVE, BROKEN, COMPLETED};
     private TrophyState state_;
     private TrophyState prev_state_;
 
@@ -27,6 +27,11 @@ public class GenericTrophy : SteamVR_InteractableObject
     private bool timer_start_ = false;
     private float on_floor_counter_ = 0;
     public float on_floor_max_time = 5; //how long the throphy can be on the floor before loosing
+
+    //cleaner 
+    public CleanerType cleaner_type = CleanerType.NONE;
+    public int number_of_sprays_to_clean = 3;
+    private int spray_count = 0;
 
     protected override void Start()
     {
@@ -80,6 +85,8 @@ public class GenericTrophy : SteamVR_InteractableObject
                 OnFloorStateHelper();
                 OnFloorCounter();
                 break;
+            case TrophyState.BROKEN:
+                break;
 
         }
 
@@ -128,6 +135,18 @@ public class GenericTrophy : SteamVR_InteractableObject
 
     }
 
+    private void CheckAndSetCompletion()
+    {
+        if (cleaner_type != CleanerType.NONE)
+        {
+            return;
+        }
+
+
+        completed_ = true;        
+    }
+ 
+
     void OnTriggerEnter(Collider coll)
     {
         //if collidiing with tray set the state
@@ -140,6 +159,26 @@ public class GenericTrophy : SteamVR_InteractableObject
         if (coll.tag == "SLOT" && !IsGrabbed())
         {
             in_slot_ = true;
+        }
+
+        //manage actions when colliding with spray
+        if (coll.tag == "SPRAY")
+        {
+            Spray script = coll.GetComponent<Spray>();
+            if (script.cleaner_type == cleaner_type && !script.used)
+            {
+                //if correct spray
+                script.used = true;
+                spray_count++;
+                if (spray_count == number_of_sprays_to_clean)
+                {
+                    cleaner_type = CleanerType.NONE;
+                }
+            }
+            else
+            {
+                //if wrong spray...
+            }
         }
     }
     

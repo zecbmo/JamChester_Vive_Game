@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-class Trophy {
-    public TrophyType type;
-    public bool isClean;
 
-}
 
 public class TrophySlot : MonoBehaviour {
     public TrophyType trophyType;
@@ -18,12 +14,12 @@ public class TrophySlot : MonoBehaviour {
         isUsed = false;
     }
 	
-    void OnTriggerEnter(Collision collision) {
+    void OnTriggerEnter(Collider collision) {
         GenericTrophy trophy = collision.gameObject.GetComponent<GenericTrophy>();
         if (trophy == null) {
             return;
         }
-        if (trophy.type == trophyType&& trophy.isClean) {
+        if (trophy.type == trophyType&& trophy.IsCompleted()) {
             isUsed = true;            
         }
     }
