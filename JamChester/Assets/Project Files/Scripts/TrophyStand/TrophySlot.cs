@@ -23,7 +23,7 @@ public class TrophySlot : MonoBehaviour {
                 if (owner) {
                     owner.OnSlotFilled();
                 }
-
+               // gameObject.SetActive(false);
             }
         }
     }
