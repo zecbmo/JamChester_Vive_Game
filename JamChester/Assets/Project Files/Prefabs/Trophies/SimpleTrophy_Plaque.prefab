@@ -96,7 +96,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135066}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.49999982, y: -0.50000024, z: -0.4999999, w: -0.5000001}
   m_LocalPosition: {x: 0, y: -0.722, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
@@ -109,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11119975, y: 1.4094348, z: -1.1330003}
+  m_LocalPosition: {x: -0.57918894, y: 0.9484001, z: -0.8961588}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 472602}
@@ -216,7 +216,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dfa9bc7546d5b59439f599c71a97079e, type: 2}
+  - {fileID: 2100000, guid: 2891739d49ac43340b0dd62c7fd040da, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -242,7 +242,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dfa9bc7546d5b59439f599c71a97079e, type: 2}
+  - {fileID: 2100000, guid: 20a731c1131c94d4eadf607349d8da80, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -412,11 +412,11 @@ MonoBehaviour:
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
-  base_type: 0
-  Gold: {fileID: 0}
-  Bronze: {fileID: 0}
-  Silver: {fileID: 0}
-  trophy_colour: 0
+  base_type: 2
+  Gold: {fileID: 2100000, guid: 6b4219f1529474042bf4f5e04a729ab9, type: 2}
+  Bronze: {fileID: 2100000, guid: 4017f4355c38cf0469f368443b6bbc42, type: 2}
+  Silver: {fileID: 2100000, guid: 666cb2a762e9fb241aa9f0ef28258bd9, type: 2}
+  trophy_colour: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

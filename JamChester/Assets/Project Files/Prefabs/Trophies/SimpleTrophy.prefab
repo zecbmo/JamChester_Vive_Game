@@ -109,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2492857, y: 0.075, z: -0.081314325}
+  m_LocalPosition: {x: 0.006273374, y: 1.019, z: -0.8297618}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 473784}
@@ -148,7 +148,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140120}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.49999982, y: -0.50000024, z: -0.4999999, w: -0.5000001}
   m_LocalPosition: {x: 0, y: -0.722, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
@@ -164,7 +164,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dfa9bc7546d5b59439f599c71a97079e, type: 2}
+  - {fileID: 2100000, guid: 20a731c1131c94d4eadf607349d8da80, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -190,7 +190,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dfa9bc7546d5b59439f599c71a97079e, type: 2}
+  - {fileID: 2100000, guid: 2891739d49ac43340b0dd62c7fd040da, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -242,7 +242,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: dfa9bc7546d5b59439f599c71a97079e, type: 2}
+  - {fileID: 2100000, guid: 9e769514ca2fd4f478c620d37877c21b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -413,9 +413,9 @@ MonoBehaviour:
   rag_type: 0
   seconds_to_clean_with_rag: 2
   base_type: 0
-  Gold: {fileID: 0}
-  Bronze: {fileID: 0}
-  Silver: {fileID: 0}
+  Gold: {fileID: 2100000, guid: 92f57c62e2bb6c44181bdc949cd6f7fa, type: 2}
+  Bronze: {fileID: 2100000, guid: 29c91ccc0d0cdf747b38f35e9a3a0df3, type: 2}
+  Silver: {fileID: 2100000, guid: ef0886672d7acc44c83198c78b4043a7, type: 2}
   trophy_colour: 0
 --- !u!1001 &100100000
 Prefab:
