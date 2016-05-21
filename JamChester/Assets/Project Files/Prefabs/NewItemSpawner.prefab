@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497074}
   - 114: {fileID: 11497388}
+  - 114: {fileID: 11458990}
   m_Layer: 0
   m_Name: NewItemSpawner
   m_TagString: Untagged
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.471, y: 1.865, z: -0.26}
+  m_LocalPosition: {x: -1.36, y: 1.738, z: -0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 499338}
@@ -91,6 +92,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132994}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11458990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef07992d5f2db26418a55ccca5ceeabf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11497388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,25 +114,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f04de19ff87a446aa0b5e317eb387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trophySpawnerRef: {fileID: 0}
   current_wave: 0
   tutorial_running: 1
   tutorial_time: 5
   wave_one_items:
   - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
+  wave_one_types: 
   wave_two_items:
   - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
   - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
+  wave_two_types: 
   wave_three_items:
   - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
   - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
   - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
+  wave_three_types: 
   wave_four_items: []
+  wave_four_types: 
   wave_five_items: []
+  wave_five_types: 
   wave_six_items: []
+  wave_six_types: 
   wave_seven_items: []
+  wave_seven_types: 
   wave_eight_items: []
+  wave_eight_types: 
   wave_nine_items: []
+  wave_nine_types: 
   wave_ten_items: []
+  wave_ten_types: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
