@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class SteamVR_ControllerActions : MonoBehaviour {
     private bool controllerVisible = true;
@@ -14,6 +16,7 @@ public class SteamVR_ControllerActions : MonoBehaviour {
     public bool IsControllerVisible()
     {
         return controllerVisible;
+        
     }
 
     public void ToggleControllerModel(bool on)
@@ -45,6 +48,14 @@ public class SteamVR_ControllerActions : MonoBehaviour {
         {
             device.TriggerHapticPulse(hapticPulseStrength);
             hapticPulseCountdown -= 1;
+        }
+
+        if (device.GetPressDown(EVRButtonId.k_EButton_ApplicationMenu))
+        {
+             WaveController.wave_complete = true;
+            Globals.game_state = GameState.PLAYING;
+             SceneManager.LoadScene(0);
+            
         }
     }
 }

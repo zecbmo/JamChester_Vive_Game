@@ -441,13 +441,17 @@ MonoBehaviour:
   isUsable: 0
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
-  type: 4
+  type: 2
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
-  rag_type: 2
+  rag_type: 0
   seconds_to_clean_with_rag: 2
   base_type: 0
+  Gold: {fileID: 0}
+  Bronze: {fileID: 0}
+  Silver: {fileID: 0}
+  trophy_colour: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

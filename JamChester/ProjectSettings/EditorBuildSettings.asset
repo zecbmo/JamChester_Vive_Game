@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Examples/001_CameraRig_VR_PlayArea.unity
+  - enabled: 1
+    path: Assets/Project Files/Scenes/Garys_working_scene.unity

@@ -98,8 +98,11 @@
     <Compile Include="Assets\Project Files\Scripts\FingerPrint.cs" />
     <Compile Include="Assets\Project Files\Scripts\GenericTrophy.cs" />
     <Compile Include="Assets\Project Files\Scripts\Globals.cs" />
+    <Compile Include="Assets\Project Files\Scripts\LooseScreen.cs" />
     <Compile Include="Assets\Project Files\Scripts\NewItemSpawner.cs" />
     <Compile Include="Assets\Project Files\Scripts\Rag.cs" />
+    <Compile Include="Assets\Project Files\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Splash.cs" />
     <Compile Include="Assets\Project Files\Scripts\Spray.cs" />
     <Compile Include="Assets\Project Files\Scripts\StampDisplay.cs" />
     <Compile Include="Assets\Project Files\Scripts\StampTrophy.cs" />
