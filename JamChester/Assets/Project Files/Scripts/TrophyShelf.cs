@@ -13,9 +13,8 @@ public class TrophyShelf : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Random rnd = new Random();
         for(int i = 0; i < slots.Length; i++) {
-            slots[i] = Instantiate(possibleSlots[0], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
+            slots[i] = Instantiate(possibleSlots[(int)Random.Range(0, possibleSlots.Length)], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
             slots[i].owner = gameObject.GetComponent<TrophyShelf>();
             slots[i].gameObject.SetActive(true);
         }
