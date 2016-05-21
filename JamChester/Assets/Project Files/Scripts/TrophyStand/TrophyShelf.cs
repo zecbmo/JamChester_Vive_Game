@@ -22,17 +22,13 @@ public class TrophyShelf : MonoBehaviour {
         }
     }
     public void MoveShelf(Vector3 vector) {
-        transform.position += vector;
+        transform.Translate( vector);
         foreach (TrophySlot slot in slots)
         {
             slot.transform.Translate(vector);
         }
     }
     
-    public void Update() {
-
-    }
-
     public void OnSlotFilled() {
         // check if all slots are filled
         int num = 0;
