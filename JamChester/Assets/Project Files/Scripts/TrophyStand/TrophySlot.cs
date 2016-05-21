@@ -15,7 +15,7 @@ public class TrophySlot : MonoBehaviour {
                 //Debug.Log("Trophy Slot collider null?");
                 return;
             }
-            if (trophy.IsCompleted()) {
+            if (trophy.IsCompleted()&& trophy.isGrabbable) {
                 isUsed = true;
                 trophy.isGrabbable = false;
 
@@ -23,7 +23,10 @@ public class TrophySlot : MonoBehaviour {
                 if (owner) {
                     owner.OnSlotFilled();
                 }
-
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                gameObject.GetComponent<TrophySlot>().enabled = false;
+                collider.gameObject.transform.parent = gameObject.transform;
+                
             }
         }
     }
