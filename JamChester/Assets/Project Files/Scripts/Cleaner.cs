@@ -32,10 +32,7 @@ public class Cleaner : SteamVR_InteractableObject
         script.cleaner_type = cleaner_type;
         rb.AddRelativeForce(-transform.forward * spray_speed);
 
-        if (spray_clone == null)
-        {
-            int thisoi = 09098;           
-        }
+      
         Destroy(spray_clone, spray_life);
 
 

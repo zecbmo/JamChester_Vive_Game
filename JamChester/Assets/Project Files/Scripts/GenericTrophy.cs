@@ -41,12 +41,42 @@ public class GenericTrophy : SteamVR_InteractableObject
     private bool rag_timer_start = false;
     private bool polished_with_rag = false;
 
+    //base selector
+    public enum BaseType { SQUARE, TRIANGLE, CIRCLE};
+    public BaseType base_type = BaseType.SQUARE;
+    private GameObject Base;
+  
+
+
     protected override void Start()
     {
         base.Start();
-      
+        SelectBase();
+        ChildStartFunctions();
     }
+    public virtual void ChildStartFunctions()
+    {
+        //overide in childe
+    }
+    void SelectBase()
+    {
+        switch (base_type)
+        {
+            case BaseType.SQUARE:
+                Base = this.transform.Find("Sqaure Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.TRIANGLE:
+                Base = this.transform.Find("Triangle Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.CIRCLE:
+                Base = this.transform.Find("Circle Base").gameObject;
+                Base.SetActive(true);
+                break;
+        }
 
+    }
     public bool IsCompleted()
     {
         return completed_;
@@ -155,7 +185,13 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         UpdateState();
         print("Washed = :" + polished_with_rag + "  RagTimer: " + rag_counter);
+        ChildUpdateFunctions();
 
+    }
+
+    public virtual void ChildUpdateFunctions()
+    {
+        //Put override functions for child class in here when inheriting
     }
 
     private void CheckAndSetCompletion()
