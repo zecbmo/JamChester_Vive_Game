@@ -1,77 +1,48 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &149728
+--- !u!1 &128902
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 490918}
-  - 33: {fileID: 3386034}
-  - 65: {fileID: 6537788}
-  - 23: {fileID: 2359244}
-  - 54: {fileID: 5489364}
-  - 114: {fileID: 11477924}
-  m_Layer: 0
-  m_Name: Stamp
-  m_TagString: Untagged
+  - 4: {fileID: 414462}
+  - 33: {fileID: 3345814}
+  - 65: {fileID: 6558544}
+  - 23: {fileID: 2309420}
+  - 54: {fileID: 5440624}
+  - 114: {fileID: 11414740}
+  m_Layer: 9
+  m_Name: UVTorch
+  m_TagString: TROPHY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &150210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 485002}
-  - 65: {fileID: 6509490}
-  m_Layer: 0
-  m_Name: trigger
-  m_TagString: STAMP
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &485002
+--- !u!4 &414462
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150210}
+  m_GameObject: {fileID: 128902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.032, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.302396, y: 1.1210188, z: -0.258}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
-  m_Father: {fileID: 490918}
-  m_RootOrder: 0
---- !u!4 &490918
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.202, y: 1.0876, z: 0}
-  m_LocalScale: {x: 0.01949017, y: 0.08115276, z: 0.029951897}
-  m_Children:
-  - {fileID: 485002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2359244
+--- !u!23 &2309420
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149728}
+  m_GameObject: {fileID: 128902}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f5a180e78cba3b64d9cffa9c458a391d, type: 2}
+  - {fileID: 2100000, guid: d9fc1084f06e2884789fac9ed7f64e69, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -87,19 +58,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3386034
+--- !u!33 &3345814
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149728}
+  m_GameObject: {fileID: 128902}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5489364
+--- !u!54 &5440624
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149728}
+  m_GameObject: {fileID: 128902}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -109,39 +80,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6509490
+--- !u!65 &6558544
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.18, y: 0.22, z: 1}
-  m_Center: {x: 0, y: -0.42, z: 0}
---- !u!65 &6537788
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149728}
+  m_GameObject: {fileID: 128902}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11477924
+--- !u!114 &11414740
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149728}
+  m_GameObject: {fileID: 128902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 23e28c433ae103042af83e7bd862a563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   highlightOnTouch: 1
@@ -152,12 +111,19 @@ MonoBehaviour:
   grabSnapType: 2
   snapToRotation: {x: 0, y: 0, z: 0}
   grabAttatchMechanic: 0
-  detatchThreshold: 50000
+  detatchThreshold: 500000
   springJointStrength: 500
   springJointDamper: 50
   isUsable: 0
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
+  type: 4
+  on_floor_max_time: 5
+  cleaner_type: 0
+  number_of_sprays_to_clean: 3
+  rag_type: 2
+  seconds_to_clean_with_rag: 2
+  base_type: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -167,5 +133,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 149728}
+  m_RootGameObject: {fileID: 128902}
   m_IsPrefabParent: 1
