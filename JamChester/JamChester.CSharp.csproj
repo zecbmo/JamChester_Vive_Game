@@ -93,7 +93,9 @@
     <Compile Include="Assets\Examples\Scripts\Sword.cs" />
     <Compile Include="Assets\Examples\Scripts\Whirlygig.cs" />
     <Compile Include="Assets\Project Files\Scripts\Cleaner.cs" />
+    <Compile Include="Assets\Project Files\Scripts\CupLiquidBits.cs" />
     <Compile Include="Assets\Project Files\Scripts\CupTrophy.cs" />
+    <Compile Include="Assets\Project Files\Scripts\FingerPrint.cs" />
     <Compile Include="Assets\Project Files\Scripts\GenericTrophy.cs" />
     <Compile Include="Assets\Project Files\Scripts\Globals.cs" />
     <Compile Include="Assets\Project Files\Scripts\NewItemSpawner.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophyShelf.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophyShelfSpawner.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophySlot.cs" />
+    <Compile Include="Assets\Project Files\Scripts\UVTrophy.cs" />
     <Compile Include="Assets\Project Files\Scripts\WaveController.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />

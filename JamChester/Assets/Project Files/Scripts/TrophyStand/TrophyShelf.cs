@@ -20,9 +20,7 @@ public class TrophyShelf : MonoBehaviour {
         for(int i = 0; i < slots.Length; i++) {
             bool success = false;
             int slotID = 0;
-            while (!success) {
-                slotID = Random.Range(0, possibleSlots.Length);
-            }
+         
             slots[i] = Instantiate(possibleSlots[slotID], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
             slots[i].owner = gameObject.GetComponent<TrophyShelf>();
             slots[i].gameObject.SetActive(true);
