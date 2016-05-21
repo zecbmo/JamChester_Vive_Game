@@ -2,7 +2,7 @@
 using System.Collections;
 
 public enum TrophyType {NONE, T_1, T_2, T_3, T_4, T_5, T_6, T_7, T_8, T_9, T_10};
-
+public enum TrophyColour {GOLD, SILVER, BRONZE };
 
 public class GenericTrophy : SteamVR_InteractableObject
 {
@@ -48,6 +48,14 @@ public class GenericTrophy : SteamVR_InteractableObject
 
     //child protector...doesdnt get completed before the child updates
     protected bool child_completed = true; //change to true if not inhertited from 
+
+    //colours that the trophy can be set to
+    public Texture Gold;
+    public Texture Bronze;
+    public Texture Silver;
+
+    public TrophyColour trophy_colour = TrophyColour.GOLD;
+
     //bad code
     private bool do_once = true;
 
@@ -57,11 +65,26 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         base.Start();
         SelectBase();
+        SetColour();
 
     }
     public virtual void ChildStartFunctions()
     {
         //overide in childe
+    }
+    void SetColour()
+    {
+        switch (trophy_colour)
+        {
+            case TrophyColour.GOLD: //change texture here
+                break;
+            case TrophyColour.SILVER:
+                break;
+            case TrophyColour.BRONZE:
+                break;
+
+        }
+
     }
     void SelectBase()
     {
@@ -84,7 +107,21 @@ public class GenericTrophy : SteamVR_InteractableObject
     }
     public bool IsCompleted()
     {
-        return completed_;
+        if (rag_type != RagType.NONE)
+        {
+            return false;
+        }
+        if (!child_completed)
+        {
+            return false;
+        }
+        if (cleaner_type != CleanerType.NONE)
+        {
+            return false; 
+        }
+
+        completed_ = true;
+        return true; 
     }
 
     private void UpdateState()

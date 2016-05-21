@@ -11,8 +11,13 @@ public class Torch : SteamVR_InteractableObject
     public override void StartUsing(GameObject usingObject) 
     {
         base.StartUsing(usingObject);
-        TurnOnLight();
+        ToggleLight();
 
+    }
+    public override void StopUsing(GameObject previousUsingObject)
+    {
+        base.StopUsing(previousUsingObject);
+        ToggleLight();
     }
 
     protected override void Start() {
@@ -21,7 +26,7 @@ public class Torch : SteamVR_InteractableObject
         beam.SetActive(beam_bool);        
     }
 
-    void TurnOnLight() 
+    void ToggleLight() 
     {
         beam_bool = !beam_bool;
         beam.SetActive(beam_bool);
