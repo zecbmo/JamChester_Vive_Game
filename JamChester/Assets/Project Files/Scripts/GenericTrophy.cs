@@ -67,18 +67,18 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         switch (base_type)
         {
-            //case BaseType.SQUARE:
-            //    Base = this.transform.Find("Sqaure Base").gameObject;
-            //    Base.SetActive(true);
-            //    break;
-            //case BaseType.TRIANGLE:
-            //    Base = this.transform.Find("Triangle Base").gameObject;
-            //    Base.SetActive(true);
-            //    break;
-            //case BaseType.CIRCLE:
-            //    Base = this.transform.Find("Circle Base").gameObject;
-            //    Base.SetActive(true);
-            //    break;
+            case BaseType.SQUARE:
+                Base = this.transform.Find("Square Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.TRIANGLE:
+                Base = this.transform.Find("Triangle Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.CIRCLE:
+                Base = this.transform.Find("Circle Base").gameObject;
+                Base.SetActive(true);
+                break;
         }
 
     }

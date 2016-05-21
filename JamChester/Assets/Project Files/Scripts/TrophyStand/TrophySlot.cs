@@ -23,10 +23,14 @@ public class TrophySlot : MonoBehaviour {
                 if (owner) {
                     owner.OnSlotFilled();
                 }
+<<<<<<< HEAD
+               // gameObject.SetActive(false);
+=======
                 gameObject.GetComponent<MeshRenderer>().enabled = false;
                 gameObject.GetComponent<TrophySlot>().enabled = false;
                 collider.gameObject.transform.parent = gameObject.transform;
                 
+>>>>>>> 3520ca909ccb90564e68b1e0068d679f93a6f2da
             }
         }
     }

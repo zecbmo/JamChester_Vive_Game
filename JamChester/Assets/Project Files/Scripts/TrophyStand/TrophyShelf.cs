@@ -37,7 +37,7 @@ public class TrophyShelf : MonoBehaviour {
                 num++;
             }
         }
-        print(num);
+       // print(num);
         if(num >= slots.Length) {
             //Debug.Log("SlotFilled");
             isCompleted = true;
