@@ -54,7 +54,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         base.Start();
         SelectBase();
-       
+
     }
     public virtual void ChildStartFunctions()
     {
@@ -64,18 +64,18 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         switch (base_type)
         {
-            case BaseType.SQUARE:
-                Base = this.transform.Find("Sqaure Base").gameObject;
-                Base.SetActive(true);
-                break;
-            case BaseType.TRIANGLE:
-                Base = this.transform.Find("Triangle Base").gameObject;
-                Base.SetActive(true);
-                break;
-            case BaseType.CIRCLE:
-                Base = this.transform.Find("Circle Base").gameObject;
-                Base.SetActive(true);
-                break;
+            //case BaseType.SQUARE:
+            //    Base = this.transform.Find("Sqaure Base").gameObject;
+            //    Base.SetActive(true);
+            //    break;
+            //case BaseType.TRIANGLE:
+            //    Base = this.transform.Find("Triangle Base").gameObject;
+            //    Base.SetActive(true);
+            //    break;
+            //case BaseType.CIRCLE:
+            //    Base = this.transform.Find("Circle Base").gameObject;
+            //    Base.SetActive(true);
+            //    break;
         }
 
     }
@@ -83,7 +83,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         return completed_;
     }
-    
+
     private void UpdateState()
     {
         if (IsGrabbed())
@@ -101,7 +101,7 @@ public class GenericTrophy : SteamVR_InteractableObject
         else if (in_slot_)
         {
             state_ = TrophyState.IN_SLOT;
-        }        
+        }
         else
         {
             state_ = TrophyState.ON_FLOOR;
@@ -149,7 +149,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         if (timer_start_) //called once 
         {
-            on_floor_counter_ = 0;    
+            on_floor_counter_ = 0;
         }
 
         if (on_floor_counter_ > on_floor_max_time)
@@ -173,7 +173,7 @@ public class GenericTrophy : SteamVR_InteractableObject
             polished_with_rag = true;
         }
 
-        
+
     }
 
     protected override void FixedUpdate()
@@ -186,7 +186,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     protected override void Update()
     {
         UpdateState();
-        print("Washed = :" + polished_with_rag + "  RagTimer: " + rag_counter);
+       // print("Washed = :" + polished_with_rag + "  RagTimer: " + rag_counter);
 
         if (do_once)
         {
@@ -211,14 +211,14 @@ public class GenericTrophy : SteamVR_InteractableObject
         }
 
 
-        completed_ = true;        
+        completed_ = true;
     }
- 
+
 
     void OnTriggerEnter(Collider coll)
     {
         //if collidiing with tray set the state
-        if(coll.tag == "TRAY" && !IsGrabbed())
+        if (coll.tag == "TRAY" && !IsGrabbed())
         {
             in_tray_ = true;
         }
@@ -256,16 +256,16 @@ public class GenericTrophy : SteamVR_InteractableObject
             if (script.type == rag_type)
             {
                 rag_timer_start = true;
-            }          
+            }
         }
-       
+
     }
 
     void OnTriggerExit(Collider coll)
     {
         if (coll.tag == "RAG TRIGGER")
         {
-            
+
             if (rag_timer_start == true)
             {
                 rag_timer_start = false;

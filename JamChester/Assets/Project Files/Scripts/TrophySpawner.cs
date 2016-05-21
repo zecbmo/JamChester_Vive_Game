@@ -5,12 +5,14 @@ using System.Linq;
 
 public class TrophySpawner : MonoBehaviour {
 
+    public TrophyShelfSpawner shelfSpawner;
     public GenericTrophy[] spawnableTrophies;    
 
     public float initialSpawnTime=1;
     public float spawnTimeDecrementAmount = 0;
     public int numberOfTicksForReduction = 0;
 
+    int spawnedTrophies = 0;
     [SerializeField]
     List<TrophyType> availableType;
 
@@ -39,6 +41,14 @@ public class TrophySpawner : MonoBehaviour {
     }
 
     void SpawnTrophy() {
+
+        if (spawnedTrophies >= shelfSpawner.availableSlots)
+        {
+            //Debug.Log("slots" + shelfSpawner.availableSlots);
+            //Debug.Log("trophies" + spawnedTrophies);
+            shelfSpawner.SpawnNewRow();
+        }
+
         bool success = false;
         int attempts = 0;
         int slotID = 0;
@@ -51,10 +61,12 @@ public class TrophySpawner : MonoBehaviour {
             }
             attempts++;
             if (attempts > 100) {
+                //Debug.Log("failed to find valid object");
                 return;
             }
         }
-        GameObject tempobject = Instantiate(spawnableTrophies[slotID],transform.position,Quaternion.identity) as GameObject;
-        tempobject.SetActive(true);
+        GenericTrophy tempobject = Instantiate(spawnableTrophies[slotID],transform.position,Quaternion.identity) as GenericTrophy;
+        tempobject.gameObject.SetActive(true);
+        spawnedTrophies++;        
     }
 }

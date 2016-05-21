@@ -13,6 +13,7 @@ public class NewItemSpawner : MonoBehaviour {
 
 
     public GameObject[] wave_one_items;
+    public TrophyType[] wave_one_types;
     public GameObject[] wave_two_items;
     public GameObject[] wave_three_items;
     public GameObject[] wave_four_items;

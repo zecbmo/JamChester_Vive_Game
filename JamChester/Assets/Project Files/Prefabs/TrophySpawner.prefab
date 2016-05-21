@@ -411,6 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a4d0add8f690f4fb703ccddbd3d9f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shelfSpawner: {fileID: 0}
   spawnableTrophies:
   - {fileID: 11460800}
   - {fileID: 11446878}
@@ -419,7 +420,7 @@ MonoBehaviour:
   initialSpawnTime: 4
   spawnTimeDecrementAmount: 0.1
   numberOfTicksForReduction: 4
-  availableType: 01000000020000000300000004000000
+  availableType: 0100000002000000
 --- !u!114 &11446878
 MonoBehaviour:
   m_ObjectHideFlags: 1

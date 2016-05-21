@@ -13,21 +13,21 @@ public class CupTrophy : GenericTrophy {
     public float ball_life = 0.25f;
     public bool drank = false;
 
-    public override void ChildStartFunctions()
-    {
-        base.ChildStartFunctions();
-        liquid_balls = this.transform.Find("Ball").gameObject;
-    }
+    //public override void ChildStartFunctions()
+    //{
+    //    base.ChildStartFunctions();
+    //    liquid_balls = this.transform.Find("Ball").gameObject;
+    //}
 
-    public override void ChildUpdateFunctions()
-    {
-        base.ChildUpdateFunctions();
+    //public override void ChildUpdateFunctions()
+    //{
+    //    base.ChildUpdateFunctions();
 
-        if (Vector3.Dot(transform.up, Vector3.down) > 0)
-        {
-            MakeLiquid();
-        }      
-    }
+    //    if (Vector3.Dot(transform.up, Vector3.down) > 0)
+    //    {
+    //        MakeLiquid();
+    //    }      
+    //}
     private void MakeLiquid()
     {
         if (spawn_count >  next_spawn)

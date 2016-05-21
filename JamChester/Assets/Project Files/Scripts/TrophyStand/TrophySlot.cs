@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class TrophySlot : MonoBehaviour {
-    [Header("Trophy Rules")]
-    public TrophyType trophyType = TrophyType.NONE;
+    
     public bool isUsed = false;
 
     public TrophyShelf owner;	
@@ -13,16 +12,14 @@ public class TrophySlot : MonoBehaviour {
             GenericTrophy trophy = collider.gameObject.GetComponent<GenericTrophy>();
 
             if (trophy == null) {
-                Debug.Log("Trophy Slot collider null?");
+                //Debug.Log("Trophy Slot collider null?");
                 return;
             }
-            if (trophy.type == trophyType && trophy.IsCompleted()) {
+            if (trophy.IsCompleted()) {
                 isUsed = true;
                 trophy.isGrabbable = false;
-                collider.transform.rotation = Quaternion.identity;
-                collider.transform.position = transform.position;
 
-                Debug.Log("Triggered Trophy Slot");
+               // Debug.Log("Triggered Trophy Slot");
                 if (owner) {
                     owner.OnSlotFilled();
                 }

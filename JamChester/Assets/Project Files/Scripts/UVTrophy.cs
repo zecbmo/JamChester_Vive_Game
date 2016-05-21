@@ -10,17 +10,17 @@ public class UVTrophy : GenericTrophy
     private bool finger_print_found = false;
 
 
-    public override void ChildStartFunctions()
-    {
-        base.ChildStartFunctions();
-        script = GetComponentInChildren<FingerPrint>();
-    }
+    //public override void ChildStartFunctions()
+    //{
+    //    base.ChildStartFunctions();
+    //    script = GetComponentInChildren<FingerPrint>();
+    //}
 
 
-    public override void ChildUpdateFunctions()
-    {
-        base.ChildUpdateFunctions();
+    //public override void ChildUpdateFunctions()
+    //{
+    //    base.ChildUpdateFunctions();
 
-        //stamped = sd.stamped;
-    }
+    //    //stamped = sd.stamped;
+    //}
 }

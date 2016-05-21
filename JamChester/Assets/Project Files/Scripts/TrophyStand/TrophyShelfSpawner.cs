@@ -9,13 +9,11 @@ public class TrophyShelfSpawner : MonoBehaviour {
     public TrophyShelf shelfPrefab;
     public float rowHeight = 0;
 
+    public int availableSlots = 0;
+
     // Use this for initialization
     void Start() {
         SpawnNewRow();
-    }
-
-    public void AddType(TrophyType type) {
-        shelfPrefab.AddType(type);
     }
 
     // Update is called once per frame
@@ -26,10 +24,13 @@ public class TrophyShelfSpawner : MonoBehaviour {
     }    
 
     public void SpawnNewRow() {
+        //Debug.Log("NewRow");
         foreach (TrophyShelf shelf in shelfList) {
             shelf.MoveShelf(new Vector3(0, rowHeight, 0));
+            
         }
         shelfList.Add(Instantiate(shelfPrefab,transform.position,Quaternion.identity) as TrophyShelf);
+        availableSlots += 4;
         shelfList.Last().gameObject.SetActive(true);
     }    
 }
