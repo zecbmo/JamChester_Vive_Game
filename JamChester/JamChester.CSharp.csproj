@@ -86,7 +86,10 @@
     <Compile Include="Assets\Examples\Scripts\SteamVR_ControllerPointerEvents_ListenerExample.cs" />
     <Compile Include="Assets\Examples\Scripts\Sword.cs" />
     <Compile Include="Assets\Examples\Scripts\Whirlygig.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Cleaner.cs" />
     <Compile Include="Assets\Project Files\Scripts\GenericTrophy.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Globals.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Spray.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophyShelf.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophyShelfSpawner.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophySlot.cs" />
