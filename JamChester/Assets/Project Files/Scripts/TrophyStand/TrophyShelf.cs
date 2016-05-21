@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 
 public class TrophyShelf : MonoBehaviour {
     public bool isCompleted;
+
+    public List<TrophyType> availableType;
 
     public TrophySlot[] possibleSlots;
 
@@ -14,7 +18,12 @@ public class TrophyShelf : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         for(int i = 0; i < slots.Length; i++) {
-            slots[i] = Instantiate(possibleSlots[Random.Range(0, possibleSlots.Length)], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
+            bool success = false;
+            int slotID = 0;
+            while (!success) {
+                slotID = Random.Range(0, possibleSlots.Length);
+            }
+            slots[i] = Instantiate(possibleSlots[slotID], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
             slots[i].owner = gameObject.GetComponent<TrophyShelf>();
             slots[i].gameObject.SetActive(true);
         }
