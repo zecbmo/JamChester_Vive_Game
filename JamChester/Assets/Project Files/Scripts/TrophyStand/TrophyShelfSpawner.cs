@@ -43,7 +43,6 @@ public class TrophyShelfSpawner : MonoBehaviour {
        foreach (TrophyShelf shelf in shelfList) {
             shelf.MoveShelf(new Vector3(0, rowHeight, 0));
         }
-
         
     }    
 }

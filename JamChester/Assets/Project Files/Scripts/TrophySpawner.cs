@@ -6,7 +6,8 @@ using System.Linq;
 public class TrophySpawner : MonoBehaviour {
 
     public TrophyShelfSpawner shelfSpawner;
-    public GenericTrophy[] spawnableTrophies;    
+    public GenericTrophy[] spawnableTrophies;
+    public NewItemSpawner newItemSpawnerRef;
 
     public float initialSpawnTime=1;
     public float spawnTimeDecrementAmount = 0;
@@ -14,7 +15,7 @@ public class TrophySpawner : MonoBehaviour {
 
     int spawnedTrophies = 0;
     [SerializeField]
-    List<TrophyType> availableType;
+    List<TrophyType> availableType = new List<TrophyType>();
 
     float timer = 0;
     int reductionTickCount = 0;
@@ -22,9 +23,15 @@ public class TrophySpawner : MonoBehaviour {
     public void AddType(TrophyType type) {
         availableType.Add(type);
     }
+    public void IncrementTrophiesCount() {
+        spawnedTrophies++;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        if(newItemSpawnerRef.tutorial_running) {
+            return;
+        }
 
         timer += Time.deltaTime;
         if (timer > initialSpawnTime) {
