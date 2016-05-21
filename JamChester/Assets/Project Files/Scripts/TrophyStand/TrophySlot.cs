@@ -4,8 +4,6 @@ using System.Collections;
 public class TrophySlot : MonoBehaviour {
     [Header("Trophy Rules")]
     public TrophyType trophyType = TrophyType.NONE;
-    public TrophyType invalidLeft = TrophyType.NONE;
-    public TrophyType invalidRight = TrophyType.NONE;
     public bool isUsed = false;
 
     public TrophyShelf owner;
