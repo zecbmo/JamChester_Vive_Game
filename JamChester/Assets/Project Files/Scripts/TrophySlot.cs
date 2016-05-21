@@ -20,7 +20,7 @@ public class TrophySlot : MonoBehaviour {
         }
         if (trophy.type == trophyType&& trophy.IsCompleted()) {
             isUsed = true;
-            trophy.isGrabbable = false;
+            //trophy.isGrabbable = false;
 
             Debug.Log("Triggered Trophy Slot");
             if (owner) {
