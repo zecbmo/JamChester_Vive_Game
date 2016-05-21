@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 86595789a06b766428bc619d2d74c18d
-timeCreated: 1463842945
+guid: a63c2f4f7a1e66e43aadc53a626c0422
+timeCreated: 1463862735
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: polySurface3
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Circular_Base
-    7400000: Take 001
-    9500000: //RootNode
+    400002: polySurface3
+    2300000: polySurface3
+    3300000: polySurface3
+    4300000: polySurface3
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

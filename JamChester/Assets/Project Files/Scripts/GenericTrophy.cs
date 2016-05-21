@@ -50,9 +50,9 @@ public class GenericTrophy : SteamVR_InteractableObject
     protected bool child_completed = true; //change to true if not inhertited from 
 
     //colours that the trophy can be set to
-    public Texture Gold;
-    public Texture Bronze;
-    public Texture Silver;
+    public Material Gold;
+    public Material Bronze;
+    public Material Silver;
 
     public TrophyColour trophy_colour = TrophyColour.GOLD;
 
@@ -74,13 +74,18 @@ public class GenericTrophy : SteamVR_InteractableObject
     }
     void SetColour()
     {
+        GameObject temp = this.transform.Find("Cup_Trophy").gameObject;
+        Renderer r = temp.GetComponent<Renderer>();
         switch (trophy_colour)
         {
-            case TrophyColour.GOLD: //change texture here
+            case TrophyColour.GOLD: //change material here
+                r.material = Gold;
                 break;
             case TrophyColour.SILVER:
+                r.material = Silver;
                 break;
             case TrophyColour.BRONZE:
+                r.material = Bronze;
                 break;
 
         }
@@ -90,18 +95,18 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         switch (base_type)
         {
-            //case BaseType.SQUARE:
-            //    Base = this.transform.Find("Square Base").gameObject;
-            //    Base.SetActive(true);
-            //    break;
-            //case BaseType.TRIANGLE:
-            //    Base = this.transform.Find("Triangle Base").gameObject;
-            //    Base.SetActive(true);
-            //    break;
-            //case BaseType.CIRCLE:
-            //    Base = this.transform.Find("Circle Base").gameObject;
-            //    Base.SetActive(true);
-            //    break;
+            case BaseType.SQUARE:
+                Base = this.transform.Find("Square Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.TRIANGLE:
+                Base = this.transform.Find("Triangle Base").gameObject;
+                Base.SetActive(true);
+                break;
+            case BaseType.CIRCLE:
+                Base = this.transform.Find("Circle Base").gameObject;
+                Base.SetActive(true);
+                break;
         }
 
     }

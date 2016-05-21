@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 86595789a06b766428bc619d2d74c18d
-timeCreated: 1463842945
+guid: 880bc0019f60e7643abb6052a65d3f35
+timeCreated: 1463862735
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Circular_Base
-    7400000: Take 001
+    4300000: UVW_Torch
     9500000: //RootNode
   materials:
     importMaterials: 1
