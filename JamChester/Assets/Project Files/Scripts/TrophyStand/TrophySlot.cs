@@ -23,7 +23,9 @@ public class TrophySlot : MonoBehaviour {
                 if (owner) {
                     owner.OnSlotFilled();
                 }
-               // gameObject.SetActive(false);
+                collider.gameObject.transform.parent = gameObject.transform;
+                collider.gameObject.GetComponent<BoxCollider>().enabled = false;
+                gameObject.SetActive(false);                
             }
         }
     }
