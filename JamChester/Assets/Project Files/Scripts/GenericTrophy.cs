@@ -45,14 +45,16 @@ public class GenericTrophy : SteamVR_InteractableObject
     public enum BaseType { SQUARE, TRIANGLE, CIRCLE};
     public BaseType base_type = BaseType.SQUARE;
     private GameObject Base;
-  
 
+
+    //bad code
+    private bool do_once = true;
 
     protected override void Start()
     {
         base.Start();
         SelectBase();
-        ChildStartFunctions();
+       
     }
     public virtual void ChildStartFunctions()
     {
@@ -185,6 +187,13 @@ public class GenericTrophy : SteamVR_InteractableObject
     {
         UpdateState();
         print("Washed = :" + polished_with_rag + "  RagTimer: " + rag_counter);
+
+        if (do_once)
+        {
+            ChildStartFunctions();
+            do_once = false;
+        }
+
         ChildUpdateFunctions();
 
     }
