@@ -5,7 +5,7 @@ public class UVTrophy : GenericTrophy
 {
 
     public bool fingerprint_found = false;
-    FingerPrint script;
+    FingerPrint[] script;
 
 
 
@@ -14,7 +14,7 @@ public class UVTrophy : GenericTrophy
     public override void ChildStartFunctions()
     {
         base.ChildStartFunctions();
-        script = GetComponentInChildren<FingerPrint>();
+        script = GetComponentsInChildren<FingerPrint>();
         child_completed = false;
 
     }
@@ -25,8 +25,11 @@ public class UVTrophy : GenericTrophy
     {
         base.ChildUpdateFunctions();
 
-
-        fingerprint_found = script.found;
+        foreach(FingerPrint f in script)
+        {
+            fingerprint_found = f.found;
+        }
+        
 
         if (fingerprint_found) 
         {

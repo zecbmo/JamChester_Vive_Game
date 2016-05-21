@@ -11,9 +11,10 @@ GameObject:
   - 33: {fileID: 3392284}
   - 65: {fileID: 6538840}
   - 23: {fileID: 2318498}
+  - 114: {fileID: 11456766}
   m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: FINGERPRINTS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ GameObject:
   - 65: {fileID: 6546146}
   - 23: {fileID: 2315388}
   - 54: {fileID: 5460392}
-  - 114: {fileID: 11485164}
+  - 114: {fileID: 11463606}
   m_Layer: 9
   m_Name: UVTrophy
   m_TagString: TROPHY
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.302396, y: 1.1210188, z: -0.369}
+  m_LocalPosition: {x: -0.4193275, y: 1.085, z: -0.7518378}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 450398}
@@ -154,7 +155,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.06, y: 0.58, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6546146
 BoxCollider:
@@ -168,7 +169,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11485164
+--- !u!114 &11456766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6995edecf93d3b478433ca6e76331bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  found: 0
+--- !u!114 &11463606
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -176,10 +189,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 163644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23e28c433ae103042af83e7bd862a563, type: 3}
+  m_Script: {fileID: 11500000, guid: c3a4d56fb8048dc419548c4c8dd85470, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightOnTouch: 1
+  highlightOnTouch: 0
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   isGrabbable: 1
   holdButtonToGrab: 1
@@ -187,19 +200,24 @@ MonoBehaviour:
   grabSnapType: 2
   snapToRotation: {x: 0, y: 0, z: 0}
   grabAttatchMechanic: 0
-  detatchThreshold: 500000
+  detatchThreshold: 50000
   springJointStrength: 500
   springJointDamper: 50
   isUsable: 0
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
-  type: 4
+  type: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
-  rag_type: 2
+  rag_type: 0
   seconds_to_clean_with_rag: 2
   base_type: 0
+  Gold: {fileID: 0}
+  Bronze: {fileID: 0}
+  Silver: {fileID: 0}
+  trophy_colour: 0
+  fingerprint_found: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

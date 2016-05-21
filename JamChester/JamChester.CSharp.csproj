@@ -98,6 +98,7 @@
     <Compile Include="Assets\Project Files\Scripts\FingerPrint.cs" />
     <Compile Include="Assets\Project Files\Scripts\GenericTrophy.cs" />
     <Compile Include="Assets\Project Files\Scripts\Globals.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Light.cs" />
     <Compile Include="Assets\Project Files\Scripts\LooseScreen.cs" />
     <Compile Include="Assets\Project Files\Scripts\NewItemSpawner.cs" />
     <Compile Include="Assets\Project Files\Scripts\Rag.cs" />

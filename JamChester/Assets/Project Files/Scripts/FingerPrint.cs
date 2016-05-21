@@ -12,12 +12,5 @@ public class FingerPrint : MonoBehaviour {
         rend.enabled = false;
     }
 
-    void OnTriggerEnter(Collider coll) 
-    {
-        if (coll.tag == "TORCH") 
-        {
-            rend.enabled = true;
-            found = true;
-        }
-    }
+
 }
