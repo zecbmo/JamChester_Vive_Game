@@ -9,6 +9,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     [Header("Trophy Stuff")]
     //Type and wheter the tasks for trophy completed
     public TrophyType type = TrophyType.T_1;
+    public bool isClean;
     private bool completed_ = false;
     
     //Managing Trophy State
