@@ -103,6 +103,7 @@
     <Compile Include="Assets\Project Files\Scripts\Spray.cs" />
     <Compile Include="Assets\Project Files\Scripts\StampDisplay.cs" />
     <Compile Include="Assets\Project Files\Scripts\StampTrophy.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Torch.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophySpawner.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophyShelf.cs" />
     <Compile Include="Assets\Project Files\Scripts\TrophyStand\TrophyShelfSpawner.cs" />
