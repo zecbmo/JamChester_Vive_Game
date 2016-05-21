@@ -46,7 +46,6 @@ GameObject:
   - 4: {fileID: 412012}
   - 33: {fileID: 3351828}
   - 65: {fileID: 6567392}
-  - 23: {fileID: 2364162}
   - 54: {fileID: 5449866}
   - 114: {fileID: 11412504}
   m_Layer: 9
@@ -200,32 +199,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!23 &2364162
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124902}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: d9fc1084f06e2884789fac9ed7f64e69, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
@@ -448,6 +421,10 @@ MonoBehaviour:
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 0
+  Gold: {fileID: 0}
+  Bronze: {fileID: 0}
+  Silver: {fileID: 0}
+  trophy_colour: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
