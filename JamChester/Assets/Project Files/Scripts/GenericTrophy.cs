@@ -203,7 +203,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     //will control the win state... if it is on the floor for too long 
     void RagCounter()
     {
-        if (rag_timer_start) //called once 
+        if (rag_timer_start) 
         {
             rag_counter += Time.deltaTime;
         }

@@ -7,7 +7,7 @@ public class WaveController : MonoBehaviour {
 
 
     public static bool wave_complete = true;
-    
+   
 
 }
 
