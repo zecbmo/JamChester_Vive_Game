@@ -15,10 +15,22 @@ public class TrophyShelf : MonoBehaviour {
 	void Start () {
         Random rnd = new Random();
         for(int i = 0; i < slots.Length; i++) {
-            slots[i] = (TrophySlot)Instantiate(possibleSlots[0], transform.position + slotSpacing*i,Quaternion.identity);
+            slots[i] = Instantiate(possibleSlots[0], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
+            slots[i].owner = gameObject.GetComponent<TrophyShelf>();
+            slots[i].gameObject.SetActive(true);
+        }
+    }
+    public void MoveShelf(Vector3 vector) {
+        transform.position += vector;
+        foreach (TrophySlot slot in slots)
+        {
+            slot.transform.position += vector;
         }
     }
     
+    public void Update() {
+
+    }
 
     public void OnSlotFilled() {
         // check if all slots are filled
@@ -28,7 +40,8 @@ public class TrophyShelf : MonoBehaviour {
                 num++;
             }
         }
-        if(num > 4) {
+        print(num);
+        if(num >= slots.Length) {
             Debug.Log("SlotFilled");
             isCompleted = true;
         }

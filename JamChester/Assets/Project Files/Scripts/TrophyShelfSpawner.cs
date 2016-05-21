@@ -23,8 +23,9 @@ public class TrophyShelfSpawner : MonoBehaviour {
 
     public void SpawnNewRow() {
         foreach (TrophyShelf shelf in shelfList) {
-            shelf.transform.Translate(new Vector3(0,rowHeight, 0));
+            shelf.MoveShelf(new Vector3(0, rowHeight, 0));
         }
-        shelfList.Add((TrophyShelf)Instantiate(shelfPrefab,transform.position,Quaternion.identity));        
+        shelfList.Add(Instantiate(shelfPrefab,transform.position,Quaternion.identity) as TrophyShelf);
+        shelfList.Last().gameObject.SetActive(true);
     }    
 }

@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCompleted: 0
   possibleSlots:
-  - {fileID: 11440170, guid: fcda87d9b05c225489dc06deed777a45, type: 2}
+  - {fileID: 0}
   slots:
   - {fileID: 0}
   - {fileID: 0}

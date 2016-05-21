@@ -10,7 +10,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     //Type and wheter the tasks for trophy completed
     public TrophyType type = TrophyType.T_1;
     
-    private bool completed_ = false;
+    private bool completed_ = true;
     
     //Managing Trophy State
     private enum TrophyState {IN_TRAY, ON_FLOOR, IN_SLOT, ACTIVE, BROKEN, COMPLETED};
@@ -131,7 +131,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     protected override void Update()
     {
         UpdateState();
-        print(on_floor_counter_);
+       // print(on_floor_counter_);
 
     }
 
