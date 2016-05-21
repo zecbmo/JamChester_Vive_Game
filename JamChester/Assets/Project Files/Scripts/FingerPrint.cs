@@ -3,13 +3,21 @@ using System.Collections;
 
 public class FingerPrint : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public bool found = false;
+    MeshRenderer rend;
+
+    void Start() 
+    {
+        rend = GetComponent<MeshRenderer>();
+        rend.enabled = false;
+    }
+
+    void OnTriggerEnter(Collider coll) 
+    {
+        if (coll.tag == "TORCH") 
+        {
+            rend.enabled = true;
+            found = true;
+        }
+    }
 }

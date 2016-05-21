@@ -4,16 +4,17 @@ using System.Collections;
 public class UVTrophy : GenericTrophy
 {
 
-    public bool stamped = false;
+    public bool fingerprint_found = false;
     FingerPrint script;
 
-    private bool finger_print_found = false;
 
 
     public override void ChildStartFunctions()
     {
         base.ChildStartFunctions();
         script = GetComponentInChildren<FingerPrint>();
+        child_completed = false;
+
     }
 
 
@@ -22,5 +23,12 @@ public class UVTrophy : GenericTrophy
         base.ChildUpdateFunctions();
 
         //stamped = sd.stamped;
+        fingerprint_found = script.found;
+
+        if (fingerprint_found) 
+        {
+            rag_type = RagType.FINGERPRINT;
+            child_completed = true;
+        }
     }
 }

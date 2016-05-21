@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum RagType { NONE, R_1, R_2, R_3, R_4};
+public enum RagType { NONE, R_1, R_2, R_3, FINGERPRINT};
 
 
 public class Rag : MonoBehaviour

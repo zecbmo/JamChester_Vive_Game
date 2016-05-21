@@ -46,9 +46,12 @@ public class GenericTrophy : SteamVR_InteractableObject
     public BaseType base_type = BaseType.SQUARE;
     private GameObject Base;
 
-
+    //child protector...doesdnt get completed before the child updates
+    protected bool child_completed = true; //change to true if not inhertited from 
     //bad code
     private bool do_once = true;
+
+
 
     protected override void Start()
     {
