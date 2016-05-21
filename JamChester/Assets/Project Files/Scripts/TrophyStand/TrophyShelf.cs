@@ -15,13 +15,27 @@ public class TrophyShelf : MonoBehaviour {
 
     public Vector3 slotSpacing;
 
-	// Use this for initialization
-	void Start () {
+    public void AddType(TrophyType type) {
+        availableType.Add(type);
+    }
+
+    // Use this for initialization
+    void Start () {
         for(int i = 0; i < slots.Length; i++) {
             bool success = false;
+            int attempts = 0;
             int slotID = 0;
             while (!success) {
                 slotID = Random.Range(0, possibleSlots.Length);
+                foreach (TrophyType trophy_type in availableType) {
+                    if (possibleSlots[slotID].trophyType == trophy_type) {
+                        success = true;
+                    }
+                }
+                attempts++;
+                if (attempts > 100) {
+                    return;
+                }
             }
             slots[i] = Instantiate(possibleSlots[slotID], transform.position + slotSpacing*i,Quaternion.identity) as TrophySlot;
             slots[i].owner = gameObject.GetComponent<TrophyShelf>();
@@ -52,6 +66,7 @@ public class TrophyShelf : MonoBehaviour {
         if(num >= slots.Length) {
             Debug.Log("SlotFilled");
             isCompleted = true;
+            WaveController.wave_complete = true;
         }
 
     }

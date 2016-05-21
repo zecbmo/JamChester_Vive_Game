@@ -14,6 +14,10 @@ public class TrophyShelfSpawner : MonoBehaviour {
         SpawnNewRow();
     }
 
+    public void AddType(TrophyType type) {
+        shelfPrefab.AddType(type);
+    }
+
     // Update is called once per frame
     void Update () {
         if(shelfList.Last().isCompleted){

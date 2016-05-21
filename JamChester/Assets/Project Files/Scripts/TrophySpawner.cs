@@ -11,11 +11,13 @@ public class TrophySpawner : MonoBehaviour {
     public float spawnTimeDecrementAmount = 0;
     public int numberOfTicksForReduction = 0;
 
-    public List<TrophyType> availableType;
+    [SerializeField]
+    List<TrophyType> availableType;
+
     float timer = 0;
     int reductionTickCount = 0;
 
-    void AddType(TrophyType type) {
+    public void AddType(TrophyType type) {
         availableType.Add(type);
     }
 	
@@ -37,6 +39,22 @@ public class TrophySpawner : MonoBehaviour {
     }
 
     void SpawnTrophy() {
-        Instantiate(spawnableTrophies[Random.Range(0, spawnableTrophies.Length)],transform.position,Quaternion.identity);        
+        bool success = false;
+        int attempts = 0;
+        int slotID = 0;
+        while (!success) {
+            slotID = Random.Range(0, spawnableTrophies.Length);
+            foreach (TrophyType trophy_type in availableType) {
+                if (spawnableTrophies[slotID].type == trophy_type) {
+                    success = true;
+                }
+            }
+            attempts++;
+            if (attempts > 100) {
+                return;
+            }
+        }
+        GameObject tempobject = Instantiate(spawnableTrophies[slotID],transform.position,Quaternion.identity) as GameObject;
+        tempobject.SetActive(true);
     }
 }

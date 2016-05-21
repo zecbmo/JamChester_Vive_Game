@@ -6,8 +6,7 @@ public class TrophySlot : MonoBehaviour {
     public TrophyType trophyType = TrophyType.NONE;
     public bool isUsed = false;
 
-    public TrophyShelf owner;
-	
+    public TrophyShelf owner;	
 
     void OnTriggerEnter(Collider collider) {
         if (!isUsed) {
