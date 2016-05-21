@@ -62,7 +62,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444134}
-  - 33: {fileID: 3356250}
   - 65: {fileID: 6506224}
   - 23: {fileID: 2313832}
   - 54: {fileID: 5453834}
@@ -307,13 +306,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120552}
   m_Mesh: {fileID: 4300000, guid: 2c6a52a1bbfc46941b714b988e87bb89, type: 3}
---- !u!33 &3356250
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166044}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3376898
 MeshFilter:
   m_ObjectHideFlags: 1
