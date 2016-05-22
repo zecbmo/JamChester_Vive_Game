@@ -12,6 +12,7 @@ public class CupTrophy : GenericTrophy {
     private float spawn_count = 0;
     public float ball_life = 0.25f;
     public bool drank = false;
+    public bool should_be_drank = true;
 
     public override void ChildStartFunctions()
     {
@@ -28,7 +29,15 @@ public class CupTrophy : GenericTrophy {
         {
             MakeLiquid();
         }
-        child_completed = drank;
+        if (should_be_drank)
+        {
+            child_completed = drank;
+        }
+        else
+        {
+            child_completed = !drank;
+        }
+        
     }
     private void MakeLiquid()
     {

@@ -421,7 +421,7 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   spray_speed: 100
   spray_life: 0.5
-  cleaner_type: 1
+  cleaner_type: 3
 --- !u!114 &11455624
 MonoBehaviour:
   m_ObjectHideFlags: 1

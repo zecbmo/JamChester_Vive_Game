@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum CleanerType { NONE, C_1, C_2, C_3};
+public enum CleanerType { NONE, BLUE, GREEN, PURPLE};
 
 public class Cleaner : SteamVR_InteractableObject
 {
@@ -9,7 +9,7 @@ public class Cleaner : SteamVR_InteractableObject
     private GameObject spray;
     public float spray_speed = 1000f;
     public float spray_life = 5f;
-    public CleanerType cleaner_type = CleanerType.C_1;
+    public CleanerType cleaner_type = CleanerType.BLUE;
 
     //sound
     GameObject SoundManager;

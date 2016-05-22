@@ -79,9 +79,9 @@ public class TrophySpawner : MonoBehaviour {
                 return;
             }
         }
-        float random_z = Random.Range(-0.4f, 4);
-        
-        GenericTrophy tempobject = Instantiate(spawnableTrophies[slotID],transform.position,Quaternion.identity) as GenericTrophy;
+        float random_z = transform.position.z - Random.Range(-0.2f, 0.2f);
+        Vector3 spawn_point = new Vector3(transform.position.x, transform.position.y, random_z);
+        GenericTrophy tempobject = Instantiate(spawnableTrophies[slotID], spawn_point, Quaternion.identity) as GenericTrophy;
         tempobject.gameObject.SetActive(true);
         sound_manager.PlaySFX(Sound.SFX.SPAWNSOUND);
         spawnedTrophies++;        

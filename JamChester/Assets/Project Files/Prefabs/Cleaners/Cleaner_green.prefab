@@ -434,7 +434,7 @@ MonoBehaviour:
   pointerActivatesUseAction: 0
   spray_speed: 100
   spray_life: 0.5
-  cleaner_type: 1
+  cleaner_type: 2
 --- !u!135 &13581052
 SphereCollider:
   m_ObjectHideFlags: 1

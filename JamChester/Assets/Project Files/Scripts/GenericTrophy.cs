@@ -201,23 +201,23 @@ public class GenericTrophy : SteamVR_InteractableObject
     }
     private void OnFloorStateHelper()
     {
-        if (prev_state_ != TrophyState.ON_FLOOR)
+        if (prev_state_ != TrophyState.ON_FLOOR && transform.position.y < 0.1f)
         {
             timer_start_ = true; //indicates exact time/tick that the state changes to the floor
-            Invoke("OnFloorSoundHelper", 1.0f);
+            sound_manager.PlaySFX(Sound.SFX.TROPHY_ON_FLOOR);
         }
         else
         {
             timer_start_ = false;
         }
     }
-    void OnFloorSoundHelper()
-    {
-        if (state_ == TrophyState.ON_FLOOR)
-        {
-            sound_manager.PlaySFX(Sound.SFX.TROPHY_ON_FLOOR);
-        }
-    }
+    //void OnFloorSoundHelper()
+    //{
+    //    if (state_ == TrophyState.ON_FLOOR)
+    //    {
+            
+    //    }
+    //}
     //will control the win state... if it is on the floor for too long 
     void OnFloorCounter()
     {
@@ -243,7 +243,7 @@ public class GenericTrophy : SteamVR_InteractableObject
             sound_counter += Time.deltaTime;
             rag_counter += Time.deltaTime;
 
-            if (sound_counter > 0.5f) 
+            if (sound_counter > 0.25f) 
             {
                 PlayRagSound();
                 sound_counter = 0;
@@ -255,6 +255,7 @@ public class GenericTrophy : SteamVR_InteractableObject
             polished_with_rag = true;
             colour_modified = false;
             child_renderer.material.color += colour_mod;
+            rag_type = RagType.NONE;
         }
 
 
@@ -368,7 +369,7 @@ public class GenericTrophy : SteamVR_InteractableObject
             if (rag_timer_start == true)
             {
                 rag_timer_start = false;
-                rag_counter = 0;
+                //rag_counter = 0;
             }
         }
 
