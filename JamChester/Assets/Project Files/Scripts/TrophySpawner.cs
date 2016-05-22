@@ -79,6 +79,8 @@ public class TrophySpawner : MonoBehaviour {
                 return;
             }
         }
+        float random_z = Random.Range(-0.4f, 4);
+        
         GenericTrophy tempobject = Instantiate(spawnableTrophies[slotID],transform.position,Quaternion.identity) as GenericTrophy;
         tempobject.gameObject.SetActive(true);
         sound_manager.PlaySFX(Sound.SFX.SPAWNSOUND);

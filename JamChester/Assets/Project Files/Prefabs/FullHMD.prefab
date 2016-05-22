@@ -2285,15 +2285,15 @@ MonoBehaviour:
   soundlist:
   - {fileID: 8300000, guid: 70772f21a07d5434882d08f7e19114fa, type: 3}
   - {fileID: 8300000, guid: 10a55199af3abdb43bf3bab625d25e42, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
-  - {fileID: 8300000, guid: d5369f8b5bb64904180a40a0acdcabb4, type: 3}
+  - {fileID: 8300000, guid: 6d1bc77c2fe4da945a029c983238ef48, type: 3}
+  - {fileID: 8300000, guid: b83dc921d963f914a8dbe74783bd8e1a, type: 3}
+  - {fileID: 8300000, guid: ad5fc364cc2031b4eb3ad163b65dc433, type: 3}
+  - {fileID: 8300000, guid: 56220a6e74aa29a489dbbe9e85966f18, type: 3}
+  - {fileID: 8300000, guid: dbe0fb705d1ec064487d0abcba9b48b4, type: 3}
+  - {fileID: 8300000, guid: d4859b48b094b8d4ba1d393f42d8f57f, type: 3}
+  - {fileID: 8300000, guid: 8b60fad2dab401b46ba4f72d365ac6a9, type: 3}
+  - {fileID: 8300000, guid: 1bcb58d3a19647644b191b5a549521c3, type: 3}
+  - {fileID: 8300000, guid: 0eee171e2285b5a4e8741dad22eab2fa, type: 3}
   source: {fileID: 0}
 --- !u!114 &11426278
 MonoBehaviour:
@@ -2309,7 +2309,7 @@ MonoBehaviour:
   borderThickness: 0.15
   wireframeHeight: 2
   drawWireframeWhenSelectedOnly: 0
-  drawInGame: 1
+  drawInGame: 0
   size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
   vertices:

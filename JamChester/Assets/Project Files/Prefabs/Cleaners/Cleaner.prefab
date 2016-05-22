@@ -408,7 +408,7 @@ MonoBehaviour:
   highlightOnTouch: 1
   touchHighlightColor: {r: 0, g: 0.8758622, b: 1, a: 0.678}
   isGrabbable: 1
-  holdButtonToGrab: 0
+  holdButtonToGrab: 1
   pauseCollisionsOnGrab: 1
   grabSnapType: 1
   snapToRotation: {x: -70, y: 90, z: -90}

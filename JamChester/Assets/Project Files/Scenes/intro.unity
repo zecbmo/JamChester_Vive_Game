@@ -1311,7 +1311,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1330018086}
-  m_Mesh: {fileID: 2103523850}
+  m_Mesh: {fileID: 2078214173}
 --- !u!23 &1330018089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2097,6 +2097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2a0d4389aec5642b50abb85394b9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadthis: 1
 --- !u!1 &1864386468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,7 +2462,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1032401131}
   m_RootOrder: 0
---- !u!43 &2103523850
+--- !u!43 &2078214173
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

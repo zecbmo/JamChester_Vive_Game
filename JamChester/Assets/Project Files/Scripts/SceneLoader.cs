@@ -5,6 +5,7 @@ public class SceneLoader : MonoBehaviour {
 
     float time = 5;
     float next_scene_count = 0;
+    public int loadthis = 2;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,7 +16,7 @@ public class SceneLoader : MonoBehaviour {
 
         if (next_scene_count > time)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(loadthis);
         }
         next_scene_count += Time.deltaTime;
 	}
