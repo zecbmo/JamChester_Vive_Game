@@ -16,16 +16,16 @@ public class TrophySpawner : MonoBehaviour {
 
     int availableRange = 0;
 
-    int spawnedTrophies = 0;    
+    public int spawnedTrophies = 0;    
 
     float timer = 0;
     int reductionTickCount = 0;
 
     GameObject SoundManager;
     Sound sound_manager;
-    public void RemoveItemsFromFront(int count)
+    public void RemoveItemAt(int count)
     {
-        spawnableTrophies.RemoveRange(0, count);       
+        spawnableTrophies.RemoveAt(count);       
     }
     public void IncreaseRandomRange(int count) {
         availableRange += count;
@@ -63,6 +63,10 @@ public class TrophySpawner : MonoBehaviour {
         if (spawnedTrophies > shelfSpawner.availableSlots)
         {
             shelfSpawner.SpawnNewRow();
+        }
+        if(availableRange == 0)
+        {
+            return;
         }
         int slotID = Random.Range(0, availableRange);        
         float random_z = transform.position.z - Random.Range(-0.2f, 0.2f);

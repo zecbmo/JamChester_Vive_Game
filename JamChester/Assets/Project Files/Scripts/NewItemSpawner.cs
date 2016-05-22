@@ -14,79 +14,64 @@ public class NewItemSpawner : MonoBehaviour {
     private float tutorial_count = 0;
 
     public GameObject[] waveOneitems;
-    public int removeItemCountOne;
+    public int[] removeItemCountOne;
     public int itemRangeIncreaseOne;
-    public int spawnedTrophiesCountOne;
-
+   
     public GameObject[] waveTwoitems;
-    public int removeItemCountTwo;
+    public int[] removeItemCountTwo;
     public int itemRangeIncreaseTwo;
-    public int spawnedTrophiesCountTwo;
 
     public GameObject[] waveThreeitems;
-    public int removeItemCountThree;
+    public int[] removeItemCountThree;
     public int itemRangeIncreaseThree;
-    public int spawnedTrophiesCountThree;
 
     public GameObject[] waveFouritems;
-    public int removeItemCountFour;
+    public int[] removeItemCountFour;
     public int itemRangeIncreaseFour;
-    public int spawnedTrophiesCountFour;
 
     public GameObject[] waveFiveitems;
-    public int removeItemCountFive;
+    public int[] removeItemCountFive;
     public int itemRangeIncreaseFive;
-    public int spawnedTrophiesCountFive;
 
     public GameObject[] waveSixitems;
-    public int removeItemCountSix;
+    public int[] removeItemCountSix;
     public int itemRangeIncreaseSix;
-    public int spawnedTrophiesCountSix;
 
     public GameObject[] waveSevenitems;
-    public int removeItemCountSeven;
+    public int[] removeItemCountSeven;
     public int itemRangeIncreaseSeven;
-    public int spawnedTrophiesCountSeven;
 
     public GameObject[] waveEightitems;
-    public int removeItemCountEight;
+    public int[] removeItemCountEight;
     public int itemRangeIncreaseEight;
-    public int spawnedTrophiesCountEight;
 
     public GameObject[] waveNineitems;
-    public int removeItemCountNine;
+    public int[] removeItemCountNine;
     public int itemRangeIncreaseNine;
-    public int spawnedTrophiesCountNine;
 
     public GameObject[] waveTenitems;
-    public int removeItemCountTen;
+    public int[] removeItemCountTen;
     public int itemRangeIncreaseTen;
-    public int spawnedTrophiesCountTen;
 
     public GameObject[] waveElevenitems;
-    public int removeItemCountEleven;
+    public int[] removeItemCountEleven;
     public int itemRangeIncreaseEleven;
-    public int spawnedTrophiesCountEleven;
 
     public GameObject[] waveTwelveitems;
-    public int removeItemCountTwelve;
+    public int[] removeItemCountTwelve;
     public int itemRangeIncreaseTwelve;
-    public int spawnedTrophiesCountTwelve;
 
     public GameObject[] waveThirteenitems;
-    public int removeItemCountThirteen;
+    public int[] removeItemCountThirteen;
     public int itemRangeIncreaseThirteen;
-    public int spawnedTrophiesCountThirteen;
 
     public GameObject[] waveFourteenitems;
-    public int removeItemCountFourteen;
+    public int[] removeItemCountFourteen;
     public int itemRangeIncreaseFourteen;
-    public int spawnedTrophiesCountFourteen;
 
     public GameObject[] waveFifteenitems;
-    public int removeItemCountFifteen;
+    public int[] removeItemCountFifteen;
     public int itemRangeIncreaseFifteen;
-    public int spawnedTrophiesCountFifteen;
 
     GameObject SoundManager;
     Sound sound_manager;
@@ -108,10 +93,8 @@ public class NewItemSpawner : MonoBehaviour {
             current_wave++;
         }
 
-        if (Input.GetKeyDown("space"))
-        {
-            WaveController.wave_complete = true;
-        }
+        //trophySpawnerRef.spawnedTrophies
+        
     }
 
     void FixedUpdate()
@@ -133,64 +116,68 @@ public class NewItemSpawner : MonoBehaviour {
         switch (current_wave)
         {
             case WaveNumber.ONE:
-                SpawnArrayItems(waveOneitems, removeItemCountOne, itemRangeIncreaseOne, spawnedTrophiesCountOne);               
+                SpawnArrayItems(waveOneitems, removeItemCountOne, itemRangeIncreaseOne);               
                 break;
             case WaveNumber.TWO:
-                SpawnArrayItems(waveTwoitems, removeItemCountTwo, itemRangeIncreaseTwo, spawnedTrophiesCountTwo);
+                SpawnArrayItems(waveTwoitems, removeItemCountTwo, itemRangeIncreaseTwo);
                 break;
             case WaveNumber.THREE:
-                SpawnArrayItems(waveThreeitems, removeItemCountThree, itemRangeIncreaseThree, spawnedTrophiesCountThree);
+                SpawnArrayItems(waveThreeitems, removeItemCountThree, itemRangeIncreaseThree);
                 break;
             case WaveNumber.FOUR:
-                SpawnArrayItems(waveFouritems, removeItemCountFour, itemRangeIncreaseFour, spawnedTrophiesCountFour);
+                SpawnArrayItems(waveFouritems, removeItemCountFour, itemRangeIncreaseFour);
                 break;
             case WaveNumber.FIVE:
-                SpawnArrayItems(waveFiveitems, removeItemCountFive, itemRangeIncreaseFive, spawnedTrophiesCountFive);
+                SpawnArrayItems(waveFiveitems, removeItemCountFive, itemRangeIncreaseFive);
                 break;
             case WaveNumber.SIX:
-                SpawnArrayItems(waveSixitems, removeItemCountSix, itemRangeIncreaseSix, spawnedTrophiesCountSix);
+                SpawnArrayItems(waveSixitems, removeItemCountSix, itemRangeIncreaseSix);
                 break;
             case WaveNumber.SEVEN:
-                SpawnArrayItems(waveSevenitems, removeItemCountSeven, itemRangeIncreaseSeven, spawnedTrophiesCountSeven);
+                SpawnArrayItems(waveSevenitems, removeItemCountSeven, itemRangeIncreaseSeven);
                 break;
             case WaveNumber.EIGHT:
-                SpawnArrayItems(waveEightitems, removeItemCountEight, itemRangeIncreaseEight, spawnedTrophiesCountEight);
+                SpawnArrayItems(waveEightitems, removeItemCountEight, itemRangeIncreaseEight);
                 break;
             case WaveNumber.NINE:
-                SpawnArrayItems(waveNineitems, removeItemCountNine, itemRangeIncreaseNine, spawnedTrophiesCountNine);
+                SpawnArrayItems(waveNineitems, removeItemCountNine, itemRangeIncreaseNine);
                 break;
             case WaveNumber.TEN:
-                SpawnArrayItems(waveEightitems, removeItemCountEight, itemRangeIncreaseEight, spawnedTrophiesCountEight);
+                SpawnArrayItems(waveEightitems, removeItemCountEight, itemRangeIncreaseEight);
                 break;
             case WaveNumber.ELEVEN:
-                SpawnArrayItems(waveElevenitems, removeItemCountEleven, itemRangeIncreaseEleven, spawnedTrophiesCountEleven);
+                SpawnArrayItems(waveElevenitems, removeItemCountEleven, itemRangeIncreaseEleven);
                 break;
             case WaveNumber.TWELVE:
-                SpawnArrayItems(waveTwelveitems, removeItemCountTwelve, itemRangeIncreaseTwelve, spawnedTrophiesCountTwelve);
+                SpawnArrayItems(waveTwelveitems, removeItemCountTwelve, itemRangeIncreaseTwelve);
                 break;
             case WaveNumber.THIRTEEN:
-                SpawnArrayItems(waveThirteenitems, removeItemCountThirteen, itemRangeIncreaseThirteen, spawnedTrophiesCountThirteen);
+                SpawnArrayItems(waveThirteenitems, removeItemCountThirteen, itemRangeIncreaseThirteen);
                 break;
             case WaveNumber.FOURTEEN:
-                SpawnArrayItems(waveFourteenitems, removeItemCountFourteen, itemRangeIncreaseFourteen, spawnedTrophiesCountFourteen);
+                SpawnArrayItems(waveFourteenitems, removeItemCountFourteen, itemRangeIncreaseFourteen);
                 break;
             case WaveNumber.FIFTEEN:
-                SpawnArrayItems(waveFifteenitems, removeItemCountFifteen, itemRangeIncreaseFifteen, spawnedTrophiesCountFifteen);
+                SpawnArrayItems(waveFifteenitems, removeItemCountFifteen, itemRangeIncreaseFifteen);
                 break;
         }
     }
 
-    void SpawnArrayItems(GameObject[] items, int removeItemCount, int itemRangeIncrease, int spawnedTrophiesCount)
+    void SpawnArrayItems(GameObject[] items, int[] removeItemCount, int itemRangeIncrease)
     {
         for (int i = 0; i < items.Length; i++)
         {
-            Instantiate(items[i], transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(items[i], transform.position, Quaternion.identity)as GameObject;
+            temp.SetActive(true);
         }
         sound_manager.PlaySFX(Sound.SFX.SPAWNSOUND);
-
-        trophySpawnerRef.RemoveItemsFromFront(removeItemCount);
+        for (int i = 0; i < removeItemCount.Length; i++)
+        {
+            trophySpawnerRef.RemoveItemAt(removeItemCount[i]);
+            itemRangeIncrease--;
+        }
+        
         trophySpawnerRef.IncreaseRandomRange(itemRangeIncrease);
-        trophySpawnerRef.IncreaseTrophies(spawnedTrophiesCount);
     }
 
    

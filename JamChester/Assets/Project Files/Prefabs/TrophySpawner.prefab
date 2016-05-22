@@ -11862,15 +11862,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shelfSpawner: {fileID: 0}
   spawnableTrophies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11406586, guid: d9855cbc2d5f8ce4aacd53af1481fe41, type: 2}
+  - {fileID: 11443896, guid: f48be5246c05ff74eba65f2bf28235f7, type: 2}
+  - {fileID: 11421722, guid: bbe61f548bd53bc428d5c36be35379a6, type: 2}
+  - {fileID: 11406586, guid: 589e80c1419433842ae2ca3325e73e41, type: 2}
+  - {fileID: 11443896, guid: b5cf36d1b64c46b4eae8ed67e4f12fc4, type: 2}
+  - {fileID: 11421722, guid: 70980bef35ebad14d82f616a1f2a4875, type: 2}
+  - {fileID: 11406586, guid: 9a97d185d79f6ac4088bb7c5a44d3283, type: 2}
+  - {fileID: 11443896, guid: de26b4edb36c3e64fb48fffd612cef02, type: 2}
+  - {fileID: 11421722, guid: af6c0a070aa66214b94f697f887c6ccd, type: 2}
   - {fileID: 11453110}
   - {fileID: 11425468}
   - {fileID: 11440096}
@@ -11914,7 +11914,6 @@ MonoBehaviour:
   initialSpawnTime: 4
   spawnTimeDecrementAmount: 0.1
   numberOfTicksForReduction: 30
-  availableType: 0200000004000000
 --- !u!114 &11417468
 MonoBehaviour:
   m_ObjectHideFlags: 1
