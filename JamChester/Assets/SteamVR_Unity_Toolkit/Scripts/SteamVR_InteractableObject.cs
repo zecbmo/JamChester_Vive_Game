@@ -235,7 +235,7 @@ public class SteamVR_InteractableObject : MonoBehaviour
             var renderer = rendererArray[i];
             if (renderer.material.HasProperty("_Color"))
             {
-                colors[i] = renderer.material.color;
+                //colors[i] = renderer.material.color;
             }
         }
         return colors;
@@ -262,7 +262,7 @@ public class SteamVR_InteractableObject : MonoBehaviour
         {
             if (renderer.material.HasProperty("_Color"))
             {
-                renderer.material.color = colors[i];
+               // renderer.material.color = colors[i];
             }
             i++;
         }

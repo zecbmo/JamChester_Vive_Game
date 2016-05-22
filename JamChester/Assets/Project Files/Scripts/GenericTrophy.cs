@@ -9,8 +9,9 @@ public class GenericTrophy : SteamVR_InteractableObject
     [Header("Trophy Stuff")]
     //Type and wheter the tasks for trophy completed
     public TrophyType type = TrophyType.T_1;
+    public bool isUsed = false;
     
-    private bool completed_ = true;
+    public bool completed_ = true;
     
     //Managing Trophy State
     private enum TrophyState {IN_TRAY, ON_FLOOR, IN_SLOT, ACTIVE, BROKEN, COMPLETED};
@@ -47,7 +48,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     private GameObject Base;
 
     //child protector...doesdnt get completed before the child updates
-    protected bool child_completed = true; //change to true if not inhertited from 
+    public bool child_completed = true; //change to true if not inhertited from 
 
     //colours that the trophy can be set to
     public Material Gold;
@@ -130,6 +131,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     }
     public bool IsCompleted()
     {
+        completed_ = false;
         if (rag_type != RagType.NONE)
         {
             return false;
@@ -140,7 +142,7 @@ public class GenericTrophy : SteamVR_InteractableObject
         }
         if (cleaner_type != CleanerType.NONE)
         {
-            return false; 
+            return false;
         }
 
         completed_ = true;

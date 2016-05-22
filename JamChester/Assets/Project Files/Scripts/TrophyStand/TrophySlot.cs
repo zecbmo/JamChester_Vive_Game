@@ -16,29 +16,34 @@ public class TrophySlot : MonoBehaviour {
     }
     
 
-    void OnTriggerEnter(Collider collider) {
-        if (!isUsed) {
-            GenericTrophy trophy = collider.gameObject.GetComponent<GenericTrophy>();
-
+    void OnTriggerStay(Collider collider) {
+        if (!isUsed && collider.tag == "TROPHY") {
+            GenericTrophy trophy = collider.gameObject.GetComponent<GenericTrophy>();            
             if (trophy == null) {
-                //Debug.Log("Trophy Slot collider null?");
                 return;
             }
-            if (trophy.IsCompleted()) {
+            if (!trophy.IsGrabbed()&& !trophy.isUsed) {
                 isUsed = true;
+                trophy.isUsed = true;
                 trophy.isGrabbable = false;
 
-                // Debug.Log("Triggered Trophy Slot");
                 if (owner) {
                     owner.OnSlotFilled();
                 }
-                collider.gameObject.transform.parent = gameObject.transform;
-                collider.gameObject.GetComponent<BoxCollider>().enabled = false;
-                gameObject.SetActive(false);
-                sound_manager.PlaySFX(Sound.SFX.COMPLETED_GOOD);
-            }
-            else {
-                sound_manager.PlaySFX(Sound.SFX.COMPLETED_BAD);
+                collider.transform.rotation = Quaternion.identity;
+                collider.transform.position = transform.position;
+                transform.gameObject.SetActive(false);
+
+                if (trophy.IsCompleted())
+                {
+                    //play sounds
+                    sound_manager.PlaySFX(Sound.SFX.COMPLETED_GOOD);
+                }
+                else {
+                    sound_manager.PlaySFX(Sound.SFX.COMPLETED_BAD);
+                    //play sounds and loos one life
+                }
+
             }
         }
     }

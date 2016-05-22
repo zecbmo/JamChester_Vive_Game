@@ -75,6 +75,7 @@ GameObject:
   - 33: {fileID: 3333066}
   - 23: {fileID: 2379562}
   - 64: {fileID: 6460924}
+  - 54: {fileID: 5447798}
   m_Layer: 0
   m_Name: pCube3
   m_TagString: Untagged
@@ -125,7 +126,7 @@ Transform:
   m_GameObject: {fileID: 179398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.06, y: 0.071, z: -0.198}
-  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.3, z: 0.2}
   m_Children: []
   m_Father: {fileID: 467430}
   m_RootOrder: 2
@@ -161,7 +162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -20.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 421604}
@@ -186,7 +187,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.377, y: 1.33, z: -0.254}
+  m_LocalPosition: {x: 1.306, y: 1.33, z: -0.254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421604}
@@ -243,7 +244,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9ee1680b48d2cb943b1f72e133beec22, type: 2}
+  - {fileID: 2100000, guid: 435c8fe1e5e911346afcd8729d98aae6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -269,7 +270,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 738cae93c6ee4d64fb6250daa081806c, type: 2}
+  - {fileID: 2100000, guid: d6f43f9ba1c2c564cbb4b32aaa5c1fe2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -306,6 +307,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128752}
   m_Mesh: {fileID: 4300000, guid: 4ae4611f87413554d894c9e6fdc0f2ee, type: 3}
+--- !u!54 &5447798
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155240}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!64 &6460924
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -374,7 +390,7 @@ MonoBehaviour:
   - {fileID: 0}
   slotPrefab: {fileID: 11467706}
   slotSpacing: {x: 0, y: 0, z: 0.4}
-  speed: 1
+  speed: 0.34
 --- !u!114 &11486344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shelfPrefab: {fileID: 11472236}
   top: {fileID: 118368}
-  rowHeight: 0.6
+  rowHeight: 0.8
   availableSlots: 0
 --- !u!1001 &100100000
 Prefab:

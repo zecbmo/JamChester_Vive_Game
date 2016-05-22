@@ -1964,12 +1964,14 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 4
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 0
+  child_completed: 1
   Gold: {fileID: 2100000, guid: aa272ac12ef87a249903d257614040b3, type: 2}
   Bronze: {fileID: 2100000, guid: 81ba5580bbeeb434fa646903ee712de8, type: 2}
   Silver: {fileID: 2100000, guid: 4dcfdaaf14e88684cbcb2f150a2c10ba, type: 2}
@@ -2000,12 +2002,14 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 2
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 0
   seconds_to_clean_with_rag: 2
   base_type: 0
+  child_completed: 1
   Gold: {fileID: 2100000, guid: 92f57c62e2bb6c44181bdc949cd6f7fa, type: 2}
   Bronze: {fileID: 2100000, guid: 29c91ccc0d0cdf747b38f35e9a3a0df3, type: 2}
   Silver: {fileID: 2100000, guid: ef0886672d7acc44c83198c78b4043a7, type: 2}
@@ -2029,7 +2033,7 @@ MonoBehaviour:
   - {fileID: 11429650}
   - {fileID: 11409162}
   newItemSpawnerRef: {fileID: 0}
-  initialSpawnTime: 0.6
+  initialSpawnTime: 6
   spawnTimeDecrementAmount: 0.1
   numberOfTicksForReduction: 4
   availableType: 0100000004000000
@@ -2059,12 +2063,14 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 4
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 2
+  child_completed: 1
   Gold: {fileID: 2100000, guid: 6b4219f1529474042bf4f5e04a729ab9, type: 2}
   Bronze: {fileID: 2100000, guid: 4017f4355c38cf0469f368443b6bbc42, type: 2}
   Silver: {fileID: 2100000, guid: 666cb2a762e9fb241aa9f0ef28258bd9, type: 2}
@@ -2095,12 +2101,14 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 4
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 2
+  child_completed: 1
   Gold: {fileID: 2100000, guid: a58e34d3510ccc248baa2271c0a0692a, type: 2}
   Bronze: {fileID: 2100000, guid: 15969fad50706f34c90ab0a7f630e811, type: 2}
   Silver: {fileID: 2100000, guid: 69c5ffc7a855acc41b537e55bd461be8, type: 2}
@@ -2131,12 +2139,14 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 4
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 0
+  child_completed: 1
   Gold: {fileID: 2100000, guid: 370894e6ea4ece34abf4cb7aa63027b6, type: 2}
   Bronze: {fileID: 2100000, guid: 1e5e5f6e8d70ce44990dfb491e95889b, type: 2}
   Silver: {fileID: 2100000, guid: a56c5cbe0ade5094b87ec94c0f7fde13, type: 2}
