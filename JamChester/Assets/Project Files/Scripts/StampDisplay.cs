@@ -17,7 +17,7 @@ public class StampDisplay : MonoBehaviour {
     {
         if (coll.tag == "STAMP")
         {
-            stamped = false;
+            stamped = true;
            // transform.localRotation = new Vector3(coll.transform.rotation.y,transform.rotation.y, transform.rotation.z);
 
             MeshRenderer mr = GetComponent<MeshRenderer>();

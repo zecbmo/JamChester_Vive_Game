@@ -66,7 +66,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     private float sound_counter = 0;
 
     //colour checkers
-    protected Color colour_mod = new Color(0.2f, 0.2f, 0.2f, 1.0f);
+    protected Color colour_mod = new Color(0.3f, 0.3f, 0.3f, 1.0f);
     protected bool colour_modified = false;
 
     protected override void Start()
