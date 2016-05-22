@@ -72,6 +72,8 @@ public class GenericTrophy : SteamVR_InteractableObject
     protected override void Start()
     {
         base.Start();
+        GameObject temp = this.transform.Find("Cup_Trophy").gameObject;
+        child_renderer = temp.GetComponent<Renderer>();
         SelectBase();
         SetColour();
         DistortColour();
@@ -80,8 +82,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     }
     void DistortColour() 
     {
-        GameObject temp = this.transform.Find("Cup_Trophy").gameObject;
-        child_renderer = temp.GetComponent<Renderer>();
+       
 
         if (rag_type != RagType.NONE || cleaner_type !=  CleanerType.NONE) 
         {
@@ -170,7 +171,7 @@ public class GenericTrophy : SteamVR_InteractableObject
         else
         {
             state_ = TrophyState.ON_FLOOR;
-            sound_manager.PlaySFX(Sound.SFX.TROPHY_ON_FLOOR);
+            
         }
     }
 
@@ -203,13 +204,20 @@ public class GenericTrophy : SteamVR_InteractableObject
         if (prev_state_ != TrophyState.ON_FLOOR)
         {
             timer_start_ = true; //indicates exact time/tick that the state changes to the floor
+            Invoke("OnFloorSoundHelper", 1.0f);
         }
         else
         {
             timer_start_ = false;
         }
     }
-
+    void OnFloorSoundHelper()
+    {
+        if (state_ == TrophyState.ON_FLOOR)
+        {
+            sound_manager.PlaySFX(Sound.SFX.TROPHY_ON_FLOOR);
+        }
+    }
     //will control the win state... if it is on the floor for too long 
     void OnFloorCounter()
     {
@@ -221,7 +229,7 @@ public class GenericTrophy : SteamVR_InteractableObject
         if (on_floor_counter_ > on_floor_max_time)
         {
             Globals.game_state = GameState.LOST;
-            sound_manager.PlaySFX(Sound.SFX.GAME_OVER);
+            //sound_manager.PlaySFX(Sound.SFX.GAME_OVER);
         }
 
         on_floor_counter_ += Time.deltaTime;
@@ -309,7 +317,7 @@ public class GenericTrophy : SteamVR_InteractableObject
     void OnTriggerEnter(Collider coll)
     {
         //if collidiing with tray set the state
-        if (coll.tag == "TRAY" && !IsGrabbed())
+        if (coll.tag == "TRAY" )
         {
             in_tray_ = true;
         }
@@ -337,10 +345,7 @@ public class GenericTrophy : SteamVR_InteractableObject
                 }
             }
 
-            else
-            {
-                //if wrong spray...
-            }
+           
         }
 
         //rag collisions - start the timer
@@ -365,6 +370,11 @@ public class GenericTrophy : SteamVR_InteractableObject
                 rag_timer_start = false;
                 rag_counter = 0;
             }
+        }
+
+        if (coll.tag == "TRAY")
+        {
+            in_tray_ = false;
         }
     }
 

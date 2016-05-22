@@ -12,6 +12,8 @@ TagManager:
   - HEAD
   - TORCH
   - FINGERPRINTS
+  - SOUND
+  - TRAY
   layers:
   - Default
   - TransparentFX
