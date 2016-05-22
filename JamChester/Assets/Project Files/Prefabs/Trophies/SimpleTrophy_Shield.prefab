@@ -121,8 +121,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.147, y: 1.13, z: -0.85}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 0.116, y: 0.988, z: -0.733}
+  m_LocalScale: {x: 0.21046071, y: 0.21046072, z: 0.21046072}
   m_Children:
   - {fileID: 475598}
   - {fileID: 443738}
@@ -311,8 +311,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.67, y: 1.15, z: 0.67}
-  m_Center: {x: 0, y: -0.09, z: 0}
+  m_Size: {x: 0.67, y: 1.15, z: 0.36}
+  m_Center: {x: 0, y: -0.09, z: -0.06}
 --- !u!95 &9514044
 Animator:
   serializedVersion: 3
@@ -407,15 +407,19 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 4
+  isUsed: 0
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 2
+  child_completed: 1
   Gold: {fileID: 2100000, guid: a58e34d3510ccc248baa2271c0a0692a, type: 2}
   Bronze: {fileID: 2100000, guid: 15969fad50706f34c90ab0a7f630e811, type: 2}
   Silver: {fileID: 2100000, guid: 69c5ffc7a855acc41b537e55bd461be8, type: 2}
+  child_renderer: {fileID: 0}
   trophy_colour: 0
 --- !u!1001 &100100000
 Prefab:

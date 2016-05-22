@@ -33,7 +33,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &497074
 Transform:
   m_ObjectHideFlags: 1
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.36, y: 1.738, z: -0.26}
+  m_LocalPosition: {x: -1.323, y: 1.865, z: -0.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 499338}
@@ -117,18 +117,15 @@ MonoBehaviour:
   trophySpawnerRef: {fileID: 0}
   current_wave: 0
   tutorial_running: 1
-  tutorial_time: 5
+  tutorial_time: 1
   wave_one_items:
-  - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
+  - {fileID: 126494, guid: 152f14d24a4f38e47a5af2bac2967518, type: 2}
   wave_one_types: 
   wave_two_items:
-  - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
-  - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
+  - {fileID: 126494, guid: 152f14d24a4f38e47a5af2bac2967518, type: 2}
   wave_two_types: 
   wave_three_items:
-  - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
-  - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
-  - {fileID: 143806, guid: 7dcf1b63cd6b6fd40ad5dfc18c7e5f4e, type: 2}
+  - {fileID: 126494, guid: 152f14d24a4f38e47a5af2bac2967518, type: 2}
   wave_three_types: 
   wave_four_items: []
   wave_four_types: 

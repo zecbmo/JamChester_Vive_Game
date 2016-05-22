@@ -109,8 +109,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22052142, y: 1.016, z: -0.85941523}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: -0.21122047, y: 0.98, z: -0.79656535}
+  m_LocalScale: {x: 0.21046071, y: 0.21046072, z: 0.21046072}
   m_Children:
   - {fileID: 489232}
   - {fileID: 416542}
@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 169118}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: -0.53, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 10.231434, y: 10.231432, z: 10.231432}
   m_Children: []
   m_Father: {fileID: 448250}
   m_RootOrder: 0
@@ -311,7 +311,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.67, y: 1.15, z: 0.67}
+  m_Size: {x: 0.43, y: 1.15, z: 0.49}
   m_Center: {x: 0, y: -0.09, z: 0}
 --- !u!95 &9554780
 Animator:
@@ -407,15 +407,19 @@ MonoBehaviour:
   holdButtonToUse: 1
   pointerActivatesUseAction: 0
   type: 4
+  isUsed: 0
+  completed_: 1
   on_floor_max_time: 5
   cleaner_type: 0
   number_of_sprays_to_clean: 3
   rag_type: 2
   seconds_to_clean_with_rag: 2
   base_type: 0
+  child_completed: 1
   Gold: {fileID: 2100000, guid: aa272ac12ef87a249903d257614040b3, type: 2}
   Bronze: {fileID: 2100000, guid: 81ba5580bbeeb434fa646903ee712de8, type: 2}
   Silver: {fileID: 2100000, guid: 4dcfdaaf14e88684cbcb2f150a2c10ba, type: 2}
+  child_renderer: {fileID: 0}
   trophy_colour: 1
 --- !u!1001 &100100000
 Prefab:

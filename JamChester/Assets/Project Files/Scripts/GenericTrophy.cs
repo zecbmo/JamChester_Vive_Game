@@ -228,7 +228,7 @@ public class GenericTrophy : SteamVR_InteractableObject
 
         if (on_floor_counter_ > on_floor_max_time)
         {
-            Globals.game_state = GameState.LOST;
+           // Globals.game_state = GameState.LOST;
             //sound_manager.PlaySFX(Sound.SFX.GAME_OVER);
         }
 
