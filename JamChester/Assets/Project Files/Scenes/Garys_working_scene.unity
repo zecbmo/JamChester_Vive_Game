@@ -135,7 +135,7 @@ Prefab:
       objectReference: {fileID: 1348567938}
     - target: {fileID: 11411362, guid: 9f7ad9b7415ca2e4da2c022feafc5d71, type: 2}
       propertyPath: initialSpawnTime
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11411362, guid: 9f7ad9b7415ca2e4da2c022feafc5d71, type: 2}
       propertyPath: numberOfTicksForReduction
@@ -202,7 +202,7 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 497074, guid: e9f38c2fd7264a042bee8a7eba0efa58, type: 2}
   m_PrefabInternal: {fileID: 1348567937}
---- !u!43 &445522671
+--- !u!43 &417758394
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -218,7 +218,7 @@ Mesh:
     vertexCount: 8
     localAABB:
       m_Center: {x: 0, y: 0.01, z: 0}
-      m_Extent: {x: 1.45, y: 0, z: 1.2000002}
+      m_Extent: {x: 1.5499998, y: 0, z: 1.2500001}
   m_Shapes:
     vertices: []
     shapes: []
@@ -270,7 +270,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 288
-    _typelessdata: 6766a63f0ad7233c686686bf000000000000803f0000803f0000803f00000000000000006766a6bf0ad7233c686686bf000000000000803f0000803f0000803f0000803f000000006766a6bf0ad7233c6866863f000000000000803f0000803f0000803f00000000000000006766a63f0ad7233c6866863f000000000000803f0000803f0000803f0000803f000000009a99b93f0ad7233c9b9999bf000000000000803f0000803f00000000000000000000803f9a99b9bf0ad7233c9b9999bf000000000000803f0000803f000000000000803f0000803f9a99b9bf0ad7233c9b99993f000000000000803f0000803f00000000000000000000803f9a99b93f0ad7233c9b99993f000000000000803f0000803f000000000000803f0000803f
+    _typelessdata: 3233b33f0ad7233ccecc8cbf000000000000803f0000803f0000803f00000000000000003233b3bf0ad7233ccecc8cbf000000000000803f0000803f0000803f0000803f000000003233b3bf0ad7233ccecc8c3f000000000000803f0000803f0000803f00000000000000003233b33f0ad7233ccecc8c3f000000000000803f0000803f0000803f0000803f000000006566c63f0ad7233c0100a0bf000000000000803f0000803f00000000000000000000803f6566c6bf0ad7233c0100a0bf000000000000803f0000803f000000000000803f0000803f6566c6bf0ad7233c0100a03f000000000000803f0000803f00000000000000000000803f6566c63f0ad7233c0100a03f000000000000803f0000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -325,7 +325,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 0.01, z: 0}
-    m_Extent: {x: 1.45, y: 0, z: 1.2000002}
+    m_Extent: {x: 1.5499998, y: 0, z: 1.2500001}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -2133,7 +2133,7 @@ Prefab:
       objectReference: {fileID: 1058762758}
     - target: {fileID: 11497388, guid: e9f38c2fd7264a042bee8a7eba0efa58, type: 2}
       propertyPath: tutorial_time
-      value: 12
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9f38c2fd7264a042bee8a7eba0efa58, type: 2}
@@ -2376,7 +2376,7 @@ Prefab:
     - target: {fileID: 3342110, guid: 308f782d38025714b86b4c49cbcc92b7, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 445522671}
+      objectReference: {fileID: 417758394}
     - target: {fileID: 8266132, guid: 308f782d38025714b86b4c49cbcc92b7, type: 2}
       propertyPath: m_audioClip
       value: 
