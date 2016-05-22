@@ -49,7 +49,7 @@ public class TrophySpawner : MonoBehaviour {
 
     void SpawnTrophy() {
 
-        if (spawnedTrophies >= shelfSpawner.availableSlots)
+        if (spawnedTrophies > shelfSpawner.availableSlots)
         {
             //Debug.Log("slots" + shelfSpawner.availableSlots);
             //Debug.Log("trophies" + spawnedTrophies);

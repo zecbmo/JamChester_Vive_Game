@@ -49,7 +49,8 @@ public class TrophyShelf : MonoBehaviour {
         if (isMoving) {
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startPoint, endPoint, fracJourney);
+            transform.Translate(Vector3.Lerp(startPoint, endPoint, fracJourney) - transform.position);
+            
             if (fracJourney > 1.0f) {
                 isMoving = false;
             }
