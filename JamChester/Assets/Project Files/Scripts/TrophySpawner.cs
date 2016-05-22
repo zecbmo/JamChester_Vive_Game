@@ -20,13 +20,20 @@ public class TrophySpawner : MonoBehaviour {
     float timer = 0;
     int reductionTickCount = 0;
 
+    GameObject SoundManager;
+    Sound sound_manager;
+
     public void AddType(TrophyType type) {
         availableType.Add(type);
     }
     public void IncrementTrophiesCount() {
         spawnedTrophies++;
     }
-	
+
+    void Start() {
+        SoundManager = GameObject.FindGameObjectWithTag("SOUND");
+        sound_manager = SoundManager.GetComponent<Sound>();
+    }
 	// Update is called once per frame
 	void Update () {
         if(newItemSpawnerRef.tutorial_running) {
@@ -74,6 +81,7 @@ public class TrophySpawner : MonoBehaviour {
         }
         GenericTrophy tempobject = Instantiate(spawnableTrophies[slotID],transform.position,Quaternion.identity) as GenericTrophy;
         tempobject.gameObject.SetActive(true);
+        sound_manager.PlaySFX(Sound.SFX.SPAWNSOUND);
         spawnedTrophies++;        
     }
 }

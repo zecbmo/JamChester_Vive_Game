@@ -97,6 +97,7 @@
     <Compile Include="Assets\Project Files\Scripts\NewItemSpawner.cs" />
     <Compile Include="Assets\Project Files\Scripts\Rag.cs" />
     <Compile Include="Assets\Project Files\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Project Files\Scripts\Sound.cs" />
     <Compile Include="Assets\Project Files\Scripts\Splash.cs" />
     <Compile Include="Assets\Project Files\Scripts\Spray.cs" />
     <Compile Include="Assets\Project Files\Scripts\StampDisplay.cs" />

@@ -33,10 +33,14 @@ public class NewItemSpawner : MonoBehaviour {
     public GameObject[] wave_ten_items;
     public TrophyType[] wave_ten_types;
 
+    GameObject SoundManager;
+    Sound sound_manager;
+
     // Use this for initialization
     void Start () {
-	
-	}
+        SoundManager = GameObject.FindGameObjectWithTag("SOUND");
+        sound_manager = SoundManager.GetComponent<Sound>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -138,6 +142,7 @@ public class NewItemSpawner : MonoBehaviour {
         {
             Instantiate(items[i], transform.position, Quaternion.identity);
         }
+        sound_manager.PlaySFX(Sound.SFX.SPAWNSOUND);
     }
 
    

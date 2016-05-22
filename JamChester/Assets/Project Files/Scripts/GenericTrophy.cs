@@ -53,43 +53,61 @@ public class GenericTrophy : SteamVR_InteractableObject
     public Material Gold;
     public Material Bronze;
     public Material Silver;
-
+    public Renderer child_renderer;
     public TrophyColour trophy_colour = TrophyColour.GOLD;
 
     //bad code
     private bool do_once = true;
 
+    //Sound
+    GameObject SoundManager;
+    Sound sound_manager;
+    private float sound_counter = 0;
 
+    //colour checkers
+    protected Color colour_mod = new Color(0.2f, 0.2f, 0.2f, 1.0f);
+    protected bool colour_modified = false;
 
     protected override void Start()
     {
         base.Start();
         SelectBase();
         SetColour();
-
+        DistortColour();
+        SoundManager = GameObject.FindGameObjectWithTag("SOUND");
+        sound_manager = SoundManager.GetComponent<Sound>();
     }
+    void DistortColour() 
+    {
+        GameObject temp = this.transform.Find("Cup_Trophy").gameObject;
+        child_renderer = temp.GetComponent<Renderer>();
+
+        if (rag_type != RagType.NONE || cleaner_type !=  CleanerType.NONE) 
+        {
+            child_renderer.material.color -= colour_mod;
+            colour_modified = true;
+        }
+    }
+
     public virtual void ChildStartFunctions()
     {
         //overide in childe
     }
     void SetColour()
     {
-        GameObject temp = this.transform.Find("Cup_Trophy").gameObject;
-        Renderer r = temp.GetComponent<Renderer>();
+        
         switch (trophy_colour)
         {
             case TrophyColour.GOLD: //change material here
-                r.material = Gold;
+                child_renderer.material = Gold;
                 break;
             case TrophyColour.SILVER:
-                r.material = Silver;
+                child_renderer.material = Silver;
                 break;
             case TrophyColour.BRONZE:
-                r.material = Bronze;
+                child_renderer.material = Bronze;
                 break;
-
         }
-
     }
     void SelectBase()
     {
@@ -150,6 +168,7 @@ public class GenericTrophy : SteamVR_InteractableObject
         else
         {
             state_ = TrophyState.ON_FLOOR;
+            sound_manager.PlaySFX(Sound.SFX.TROPHY_ON_FLOOR);
         }
     }
 
@@ -200,6 +219,7 @@ public class GenericTrophy : SteamVR_InteractableObject
         if (on_floor_counter_ > on_floor_max_time)
         {
             Globals.game_state = GameState.LOST;
+            sound_manager.PlaySFX(Sound.SFX.GAME_OVER);
         }
 
         on_floor_counter_ += Time.deltaTime;
@@ -208,17 +228,41 @@ public class GenericTrophy : SteamVR_InteractableObject
     //will control the win state... if it is on the floor for too long 
     void RagCounter()
     {
-        if (rag_timer_start) 
+        if (rag_timer_start && !polished_with_rag) 
         {
+            sound_counter += Time.deltaTime;
             rag_counter += Time.deltaTime;
+
+            if (sound_counter > 0.5f) 
+            {
+                PlayRagSound();
+                sound_counter = 0;
+            }
         }
 
         if (rag_counter > seconds_to_clean_with_rag)
         {
             polished_with_rag = true;
+            colour_modified = false;
+            child_renderer.material.color += colour_mod;
         }
 
 
+    }
+    void PlayRagSound() 
+    {
+        switch(rag_type)
+        {
+            case RagType.BRUSH:
+                sound_manager.PlaySFX(Sound.SFX.BRUSH);
+                break;
+            case RagType.SPONGE:
+                sound_manager.PlaySFX(Sound.SFX.SPONGE);
+                break;
+            case RagType.FINGERPRINT:
+                sound_manager.PlaySFX(Sound.SFX.CLOTH);
+                break;
+        }
     }
 
     protected override void FixedUpdate()
@@ -286,8 +330,11 @@ public class GenericTrophy : SteamVR_InteractableObject
                 if (spray_count == number_of_sprays_to_clean)
                 {
                     cleaner_type = CleanerType.NONE;
+                    colour_modified = false;
+                    child_renderer.material.color += colour_mod;
                 }
             }
+
             else
             {
                 //if wrong spray...

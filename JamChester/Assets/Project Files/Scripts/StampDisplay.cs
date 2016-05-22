@@ -4,6 +4,14 @@ using System.Collections;
 public class StampDisplay : MonoBehaviour {
 
     public bool stamped = false;
+    Sound sound_manager;
+    GameObject SoundManager;
+
+    void Start() {
+        SoundManager = GameObject.FindGameObjectWithTag("SOUND");
+        sound_manager = SoundManager.GetComponent<Sound>();
+    }
+
 
     void OnTriggerEnter(Collider coll)
     {
@@ -14,6 +22,8 @@ public class StampDisplay : MonoBehaviour {
 
             MeshRenderer mr = GetComponent<MeshRenderer>();
             mr.enabled = true;
+            sound_manager.PlaySFX(Sound.SFX.STAMP);
+            
         }
     }
 }

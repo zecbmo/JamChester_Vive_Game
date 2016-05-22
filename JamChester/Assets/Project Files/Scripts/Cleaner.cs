@@ -11,6 +11,10 @@ public class Cleaner : SteamVR_InteractableObject
     public float spray_life = 5f;
     public CleanerType cleaner_type = CleanerType.C_1;
 
+    //sound
+    GameObject SoundManager;
+    Sound sound_manager;
+
     public override void StartUsing(GameObject usingObject)
     {
         base.StartUsing(usingObject);
@@ -21,10 +25,13 @@ public class Cleaner : SteamVR_InteractableObject
     {
         base.Start();
         spray = this.transform.Find("Spray").gameObject;
+        SoundManager = GameObject.FindGameObjectWithTag("SOUND");
+        sound_manager = SoundManager.GetComponent<Sound>();
     }
 
     void FireSpray()
     {
+        sound_manager.PlaySFX(Sound.SFX.SPRAY);
         GameObject spray_clone = Instantiate(spray, spray.transform.position, Quaternion.identity) as GameObject;
         spray_clone.SetActive(true);
         Rigidbody rb = spray_clone.GetComponent<Rigidbody>();
