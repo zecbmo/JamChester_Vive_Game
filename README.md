@@ -13,4 +13,4 @@ Done in 40hrs at JamChester GameJam,  therefore commits questionable and not to 
 
 Current best branch gaffs. 
 
-Will be continue development on this game for some extra polish.
+Will be continuing development on this game for some extra polish.
