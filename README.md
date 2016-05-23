@@ -2,10 +2,9 @@
 
 TROPHIES PLEASE! Puzzle Micro-Management VR Game
 
-You are a guy who wins at life, at everything, and you just can't get enough of these trophies. The trophies are piling through the door and you have got to clean and care for them properly before putting them on your trophy shelf. As the day goes on more trophies keep coming through that letterbox.
+You have won at life, at everything, and you just can't get enough of these trophies. The trophies are piling through the door and you have got to clean and care for them properly before putting them on your trophy shelf. As the day goes on more trophies keep coming through that letterbox.
 
 Better get cleaning in the best VR game.
-
 
 Unity3D and HTCVive required. 
 
