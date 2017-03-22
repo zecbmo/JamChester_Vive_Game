@@ -1,0 +1,62 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_Init_HmdNotFound: "Hmd Not Found (108)"!
+ 
+(Filename:  Line: 954)
+
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     4058 MB
+    Driver:   21.21.13.7653
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
+- Completed reload, in  0.269 seconds
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\georg\Documents\GitHub\JamChester_Vive_Game\Trophies Please V1.01\Trophies Please V1.01_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initialized touch support.
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_Init_HmdNotFound: "Hmd Not Found (108)"!
+ 
+(Filename:  Line: 954)
+
+VR: OpenVR Error! OpenVR failed initialization with error code VRInitError_Init_HmdNotFound: "Hmd Not Found (108)"!
+ 
+(Filename:  Line: 954)
+
+UnloadTime: 1.337561 ms
+OpenVR initialization failed.  Ensure 'Virtual Reality Supported' is checked in Player Settings, and OpenVR is added to the list of Virtual Reality SDKs.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 22c0 -> priority: 1 
+  Thread -> id: 2ca0 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.125600 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 484.
+Total: 0.206074 ms (FindLiveObjects: 0.064254 ms CreateObjectMapping: 0.010495 ms MarkObjects: 0.108284 ms  DeleteObjects: 0.022015 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.392180 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2228.
+Total: 0.620526 ms (FindLiveObjects: 0.129020 ms CreateObjectMapping: 0.027903 ms MarkObjects: 0.430323 ms  DeleteObjects: 0.032767 ms)
+
